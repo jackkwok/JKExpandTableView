@@ -285,7 +285,7 @@
         
         [cell setParentIndex:parentIndex];
         [cell selectionIndicatorState:[self hasSelectedChild:parentIndex]];
-        [cell setupDisplay];
+        //[cell setupDisplay];
         
         return cell;
     }

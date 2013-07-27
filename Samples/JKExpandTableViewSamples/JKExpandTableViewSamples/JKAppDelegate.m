@@ -15,7 +15,12 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    SimpleExampleViewController * exampleController =  [[SimpleExampleViewController alloc] initWithNibName:@"SimpleExampleViewController" bundle:nil];
+    SimpleExampleViewController * exampleController = nil;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+         exampleController =  [[SimpleExampleViewController alloc] initWithNibName:@"SimpleExampleViewControllerPad" bundle:nil];
+    } else {
+         exampleController =  [[SimpleExampleViewController alloc] initWithNibName:@"SimpleExampleViewController" bundle:nil];
+    }
     self.window.rootViewController = exampleController;
     
     [self.window makeKeyAndVisible];

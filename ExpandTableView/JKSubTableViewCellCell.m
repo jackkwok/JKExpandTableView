@@ -13,7 +13,8 @@
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
-    
+    [self setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+    [[self contentView] setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     if(!self)
         return self;
     
@@ -37,6 +38,10 @@
     return self;
 }
 
+- (void) layoutSubviews {
+    [super layoutSubviews];
+    [self setupDisplay];
+}
 
 - (void) setupDisplay {
     CGRect contentRect = [self bounds];
@@ -64,17 +69,19 @@
     self.iconImage.frame = CGRectMake(sidePadding, (contentAreaHeight - iconHeight)/2, iconWidth, iconHeight);
     //self.iconImage.backgroundColor = [UIColor blueColor];
     
-    CGFloat XOffset = contentRect.origin.x + iconWidth + sidePadding + icon2LabelPadding;
+    CGFloat XOffset = iconWidth + sidePadding + icon2LabelPadding;
     
     CGFloat labelWidth = contentAreaWidth - XOffset - checkMarkWidth - checkMarkPadding;
-    self.titleLabel.frame = CGRectMake(XOffset,11, labelWidth, 20);
+    self.titleLabel.frame = CGRectMake(XOffset, 0, labelWidth, contentAreaHeight);
+
+    //self.titleLabel.backgroundColor = [UIColor purpleColor];
     //self.selectionIndicatorImg.backgroundColor = [UIColor yellowColor];
     
     self.selectionIndicatorImg.frame = CGRectMake(contentAreaWidth - checkMarkWidth - checkMarkPadding,
                                                       (contentRect.size.height/2)-(checkMarkHeight/2),
                                                       checkMarkWidth,
                                                       checkMarkHeight);
-    //self.titleLabel.backgroundColor = [UIColor grayColor];
+    
     
 }
 

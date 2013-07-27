@@ -22,6 +22,9 @@
         self.insideTableView = [[UITableView alloc] init];
         insideTableView.dataSource = self;
         insideTableView.delegate = self;
+        [self setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+        [[self contentView] setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+        [self.insideTableView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
         insideTableView.frame = CGRectMake(0, 0, self.contentView.frame.size.width, self.contentView.frame.size.height);
         fgColor = [UIColor darkTextColor];
         bgColor = [UIColor clearColor];
@@ -124,7 +127,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     //cell.textLabel.textColor = [UIColor grayColor];
     cell.textLabel.font = [UIFont systemFontOfSize:16];
-    [cell setupDisplay];
+    //[cell setupDisplay];
     return cell;
 }
 

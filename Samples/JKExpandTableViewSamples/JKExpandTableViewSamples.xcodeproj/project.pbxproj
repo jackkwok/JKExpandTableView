@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B7C7C7D417A21C160046DDCE /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C7C7D317A21C160046DDCE /* cat.png */; };
 		B7C7C7D617A21C1F0046DDCE /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C7C7D517A21C1F0046DDCE /* heart.png */; };
+		B7D377F317A327400001F5BC /* SimpleExampleViewControllerPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7D377F217A327400001F5BC /* SimpleExampleViewControllerPad.xib */; };
 		B7D7223517A1DC8C005680A5 /* green_checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7D7223317A1DC8C005680A5 /* green_checkmark@2x.png */; };
 		B7D7223617A1DC8C005680A5 /* smartphone.png in Resources */ = {isa = PBXBuildFile; fileRef = B7D7223417A1DC8C005680A5 /* smartphone.png */; };
 		B7E3102B17A0D9340049FD09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E3102A17A0D9340049FD09 /* UIKit.framework */; };
@@ -73,6 +74,7 @@
 /* Begin PBXFileReference section */
 		B7C7C7D317A21C160046DDCE /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
 		B7C7C7D517A21C1F0046DDCE /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		B7D377F217A327400001F5BC /* SimpleExampleViewControllerPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleExampleViewControllerPad.xib; sourceTree = "<group>"; };
 		B7D7223317A1DC8C005680A5 /* green_checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green_checkmark@2x.png"; sourceTree = "<group>"; };
 		B7D7223417A1DC8C005680A5 /* smartphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smartphone.png; sourceTree = "<group>"; };
 		B7E3102717A0D9340049FD09 /* JKExpandTableViewSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKExpandTableViewSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +181,7 @@
 				B7E3107C17A0D9DE0049FD09 /* SimpleExampleViewController.h */,
 				B7E3107D17A0D9DE0049FD09 /* SimpleExampleViewController.m */,
 				B7E3107E17A0D9DE0049FD09 /* SimpleExampleViewController.xib */,
+				B7D377F217A327400001F5BC /* SimpleExampleViewControllerPad.xib */,
 				B7E3108117A0D9E80049FD09 /* examples_img */,
 				B7E3103117A0D9340049FD09 /* Supporting Files */,
 			);
@@ -356,6 +359,7 @@
 				B7D7223617A1DC8C005680A5 /* smartphone.png in Resources */,
 				B7C7C7D417A21C160046DDCE /* cat.png in Resources */,
 				B7C7C7D617A21C1F0046DDCE /* heart.png in Resources */,
+				B7D377F317A327400001F5BC /* SimpleExampleViewControllerPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

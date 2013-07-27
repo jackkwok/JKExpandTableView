@@ -14,7 +14,8 @@
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier; {
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
-    
+    [self setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+    [[self contentView] setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     if(!self) {
         return self;
     }
@@ -40,6 +41,11 @@
     return self;
 }
 
+- (void) layoutSubviews {
+    [super layoutSubviews];
+    [self setupDisplay];
+}
+
 - (void)setupDisplay {
     CGRect contentRect = [self bounds];
     CGFloat contentAreaWidth = self.contentView.bounds.size.width;
@@ -63,11 +69,11 @@
     [self.contentView setAutoresizesSubviews:YES];
 
     self.iconImage.frame = CGRectMake(sidePadding, (contentAreaHeight - iconHeight)/2, iconWidth, iconHeight);
-    CGFloat XOffset = contentRect.origin.x + iconWidth + sidePadding + icon2LabelPadding;
+    CGFloat XOffset = iconWidth + sidePadding + icon2LabelPadding;
     
     CGFloat labelWidth = contentAreaWidth - XOffset - checkMarkWidth - checkMarkPadding;
-    self.label.frame = CGRectMake(XOffset,11, labelWidth, 20);
-    
+    self.label.frame = CGRectMake(XOffset, 0, labelWidth, contentAreaHeight);
+    //self.label.backgroundColor = [UIColor redColor];
     self.selectionIndicatorImgView.frame = CGRectMake(contentAreaWidth - checkMarkWidth - checkMarkPadding,
                                                  (contentRect.size.height/2)-(checkMarkHeight/2),
                                                  checkMarkWidth,
