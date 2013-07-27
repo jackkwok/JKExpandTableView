@@ -4,11 +4,13 @@ JKExpandTableView for iOS
 ![Screenshot](https://raw.github.com/jackkwok/JKExpandTableView/master/README_IMG/screen1_default.png) ![Screenshot](https://raw.github.com/jackkwok/JKExpandTableView/master/README_IMG/screen5_custom_icon_color.png) 
 
 
+## Summary
+
 JKExpandableNestedTableView is a lightweight library for iOS that makes it easy to create a table view with expandable/collapsable rows.  Recursive nesting is not supported.
 
 Compatibility: iOS 4.0+.  Requires ARC.
 
-## Overview
+## Technical Overview
 
 The interface definition of JKExpandTableView takes inspirations from UITableView.
 
@@ -26,9 +28,9 @@ A pedagogical example project is provided for your learning enjoyment.
 * Single-selectable sub-table.
 * Mixing multi-selectable and single-selectable sub-tables within a single JKExpandTableView.
 * Customizable background/foreground colors and fonts.
-* Optional icons.
+* Optional icons (item icon, selection indicator icon).
 
-## Implementation Overview
+## Implementation Details
 This overview is written for liked-minded developers interested in contributing to this library.
 
 A parent cell is a top level cell.  Each parent cell can have one or more children cells nested under it.  Behind the scene, the collection of children cells under each parent is implemented via its own UITableView.
