@@ -6,7 +6,7 @@ JKExpandTableView for iOS
 
 ## Summary
 
-JKExpandableNestedTableView is a lightweight library for iOS that makes it easy to create a table view with expandable/collapsable rows.  Recursive nesting is not supported.
+JKExpandTableView is a subclass of UITableView for iOS (iPhone and iPad) that makes it easy to create a table view with expandable/collapsable rows.  Recursive nesting is not supported.
 
 Compatibility: iOS 4.0+.  Requires ARC.
 
@@ -28,7 +28,7 @@ A pedagogical example project is provided for your learning enjoyment.
 * Single-selectable sub-table.
 * Mixing multi-selectable and single-selectable sub-tables within a single JKExpandTableView.
 * Customizable background/foreground colors and fonts.
-* Optional icons (item icon, selection indicator icon).
+* Optional customizable icons (item icon, selection indicator icon).
 
 ## Implementation Details
 This overview is written for liked-minded developers interested in contributing to this library.
