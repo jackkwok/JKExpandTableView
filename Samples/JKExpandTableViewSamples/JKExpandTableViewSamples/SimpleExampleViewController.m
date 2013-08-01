@@ -71,11 +71,11 @@
 // return YES if more than one child under this parent can be selected at the same time.  Otherwise, return NO.
 // it is permissible to have a mix of multi-selectables and non-multi-selectables.
 - (BOOL) shouldSupportMultipleSelectableChildrenAtParentIndex:(NSInteger) index {
-    return NO;
-}
-// return YES if multiple parent can be expanded at the same time, return NO if at most parent can be in expanded state at the same time.
-- (BOOL) shouldAllowMultipleExpansions {
-    return YES;
+    if ((index % 2) == 0) {
+        return NO;
+    } else {
+        return YES;
+    }
 }
 
 - (void) tableView:(UITableView *)tableView didSelectCellAtChildIndex:(NSInteger) childIndex withInParentCellIndex:(NSInteger) parentIndex {
@@ -87,15 +87,15 @@
     [[self.dataModelArray objectAtIndex:parentIndex] setObject:[NSNumber numberWithBool:NO] atIndex:childIndex];
     NSLog(@"data array: %@", self.dataModelArray);
 }
-
+/*
 - (UIColor *) foregroundColor {
     return [UIColor darkTextColor];
 }
 
 - (UIColor *) backgroundColor {
-    return [UIColor whiteColor];
+    return [UIColor grayColor];
 }
-/*
+*/
 - (UIFont *) fontForParents {
     return [UIFont fontWithName:@"American Typewriter" size:18];
 }
@@ -103,12 +103,12 @@
 - (UIFont *) fontForChildren {
     return [UIFont fontWithName:@"American Typewriter" size:18];
 }
-*/
 
+/*
 - (UIImage *) selectionIndicatorIcon {
     return [UIImage imageNamed:@"green_checkmark"];
 }
-
+*/
 #pragma mark - JKExpandTableViewDataSource
 - (NSInteger) numberOfParentCells {
     return [self.dataModelArray count];
@@ -137,7 +137,13 @@
 }
 
 - (UIImage *) iconForCellAtChildIndex:(NSInteger) childIndex withinParentCellIndex:(NSInteger) parentIndex {
-    return [UIImage imageNamed:@"smartphone"];
+    if (((childIndex + parentIndex) % 3) == 0) {
+        return [UIImage imageNamed:@"heart"];
+    } else if ((childIndex % 2) == 0) {
+        return [UIImage imageNamed:@"cat"];
+    } else {
+        return [UIImage imageNamed:@"dog"];
+    }
 }
 
 - (BOOL) shouldRotateIconForParentOnToggle {

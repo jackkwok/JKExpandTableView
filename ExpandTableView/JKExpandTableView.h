@@ -16,8 +16,6 @@
 // return YES if more than one child under this parent can be selected at the same time.  Otherwise, return NO.
 // it is permissible to have a mix of multi-selectables and non-multi-selectables.
 - (BOOL) shouldSupportMultipleSelectableChildrenAtParentIndex:(NSInteger) index;
-// return YES if multiple children can be shown in expanded state at the same time; Otherwise, return NO.
-- (BOOL) shouldAllowMultipleExpansions;
 
 @optional
 // method the delegate should implement to get notified when a child is clicked on.

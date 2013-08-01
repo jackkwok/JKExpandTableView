@@ -316,7 +316,7 @@
         
         if ([[self.expansionStates objectAtIndex:[pCell parentIndex]] boolValue]) {
             [self collapseForParentAtRow:indexPath.row];
-            [self animateParentCellIconExpand:NO forCell:pCell];  // TODO handle the case where there is no child. what should be done to indicate that case?
+            [self animateParentCellIconExpand:NO forCell:pCell];  // TODO handle the case where there is no child.
         } else {
             [self expandForParentAtRow:indexPath.row];
             [self animateParentCellIconExpand:YES forCell:pCell];
