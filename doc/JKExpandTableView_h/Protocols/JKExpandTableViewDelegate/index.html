@@ -1,0 +1,446 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><head>
+    <title>JKExpandTableViewDelegate</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <meta name="generator" content="HeaderDoc" />
+<meta name="xcode-display" content="render" />
+<style type="text/css"><!--.char {background: #ffffff; color:#0000ff;}.comment {background:#ffffff; color:#236e25}.function {background:#ffffff; color:#000000;}.keyword {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.param {background:#ffffff; color:#000000;}.preprocessor {background:#ffffff; color:#236e25}.string {background: #ffffff; color:#891315;}.template {background:#ffffff; color:#761550;}.type {background:#ffffff; color:#761550;}.var {background:#ffffff; color:#000000;}body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style><style><!--
+body {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+.toc_contents_text {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+ul.tocSubEntryList li.tocSubEntry {
+    list-style: none;
+}
+
+#colorbox {
+		display: none;
+}
+.spec_sheet_line {
+		margin-bottom: 1px;
+}
+.collapsible {
+		display: none;
+}
+.toc_leadspace {
+		width: 10; min-width: 10;
+}
+.disclosure_triangle_td {
+		width: 14; min-width: 14;
+		font-size: 10px;
+		vertical-align: middle;
+}
+.specbox td {
+		font-size: 13px;
+}
+.specbox td a {
+		font-size: 13px;
+}
+.specbox td code {
+		font-size: 13px;
+}
+.specbox td tt {
+		font-size: 13px;
+}
+.specbox td pre {
+		font-size: 13px;
+}
+.specbox a {
+		font-size: 12px;
+}
+.disclosure_triangle_td a {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:link {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:active {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:visited:hover {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:hover {
+		text-decoration: none;
+}
+.hd_toc_box {
+		padding-top: 10px;
+		padding-right: 15px;
+}.tocSeparator {
+		margin-top: 15px;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+}
+.tocSubEntryList {
+		margin-left: 0px;
+		padding-left: 40px;
+		padding-top: 0px;
+		margin-top: 2px;
+		padding-bottom: 0px;
+		margin-bottom: 8px;
+}
+.hd_toc_heading_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.hd_toc_entry_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.tocSubEntry {
+		margin-left: 0px;
+		padding-left: 0px;
+		margin-top: 0px;
+		margin-bottom: 1px;
+}
+.tocSubEntry a {
+		font-size: 10pt;
+}
+.tocSubheading {
+		padding-left: 14px;
+		margin-left: 0px;
+		margin-top: 5px;
+		padding-top: 0px;
+		font-size: 16px;
+		color: #808080;
+}
+
+#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }
+#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }
+
+#tocMenu {
+		border-right: 1px solid #c0c0c0;
+		background-color: #f4f4ff;
+		top:0px;
+		left:0px;
+		width:230px;
+		height:100%;
+}
+#bodyContents {
+		width: auto;
+		padding-left: 15px;
+}
+--></style>
+<style id="disable_before_iOS_5"><!--
+#tocMenu {
+		position: fixed;
+		height: 100%;
+		overflow: auto;
+}
+#bodyContents {
+		width: auto;
+		left: 235px;
+		right: 0;
+		padding-left: 15px;
+		position: fixed;
+		height: 100%;
+		overflow-y: scroll;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+    if (navigator.platform && (navigator.platform.match(/iPad/) || navigator.platform.match(/iPhone/) || navigator.platform.match(/iPod/))) {
+        if (navigator.userAgent.match(/OS 1(_\d)+/) ||
+            navigator.userAgent.match(/OS 2(_\d)+/) ||
+            navigator.userAgent.match(/OS 3(_\d)+/) ||
+            navigator.userAgent.match(/OS 4(_\d)+/)) {
+                /* Earlier iOS versions require different scrolling gestures with position: fixed. */
+                var del_style_elt = document.getElementById("disable_before_iOS_5");
+                if (del_style_elt) del_style_elt.parentNode.removeChild(del_style_elt);
+        }
+    }
+// --></script>
+<script language="JavaScript" type="text/javascript"><!--
+function getNewHTTPObject()
+{
+        var xmlhttp;
+
+        /** Special IE only code ... */
+        /*@cc_on
+          @if (@_jscript_version >= 5)
+              try
+              {
+                  xmlhttp = new ActiveXObject('Msxml2.XMLHTTP');
+              }
+              catch (e)
+              {
+                  try
+                  {
+                      xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+                  }
+                  catch (E)
+                  {
+                      xmlhttp = false;
+                  }
+             }
+          @else
+             xmlhttp = false;
+        @end @*/
+
+        /** Every other browser on the planet */
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined')
+        {
+            try
+            {
+                xmlhttp = new XMLHttpRequest();
+            }
+            catch (e)
+            {
+                xmlhttp = false;
+            }
+        }
+
+        return xmlhttp;
+}
+
+function hidetoc() {
+	var toc = document.getElementById('tocMenu');
+	var src = toc.getAttribute('src');
+	var xhr = getNewHTTPObject();
+	xhr.open('GET', src, true);
+	xhr.onreadystatechange = function() {
+		if(xhr.readyState == 4) {
+			var toc = document.getElementById('tocMenu');
+			toc.innerHTML = xhr.responseText;
+		}
+	}
+	xhr.send(null);
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var body = document.getElementById('bodyContents');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+
+function disclosure_triangle(elt) {
+   var linkelt = elt;
+   while (elt && elt.tagName != 'TABLE') { elt = elt.parentNode;}
+   if (!elt) { return; }
+   while (elt && elt.tagName != 'DIV') { elt = elt.nextSibling;}
+   if (!elt) { return; }
+   if (parseInt(linkelt.getAttribute('state'))) {
+      // It's open.  Close it
+      linkelt.innerHTML = '&#x25B7;';
+      linkelt.setAttribute('state', 0);
+      linkelt.setAttribute('class', 'closed_disclosure_triangle');
+      elt.style.display = 'none';
+   } else {
+      // It's closed.  Open it
+      linkelt.innerHTML = '&#x25BC;';
+      linkelt.setAttribute('state', 1);
+      linkelt.setAttribute('class', 'open_disclosure_triangle');
+      elt.style.display = 'block';
+   }
+}
+--></script>
+<style type="text/css"><!--.char {background: #ffffff; color:#0000ff;}.comment {background:#ffffff; color:#236e25}.function {background:#ffffff; color:#000000;}.keyword {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.param {background:#ffffff; color:#000000;}.preprocessor {background:#ffffff; color:#236e25}.string {background: #ffffff; color:#891315;}.template {background:#ffffff; color:#761550;}.type {background:#ffffff; color:#761550;}.var {background:#ffffff; color:#000000;}body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style></head><body bgcolor="#ffffff" onload="hidetoc();" >
+<!-- headerDoc=intf; uid=//apple_ref/occ/intf/JKExpandTableViewDelegate;  name=JKExpandTableViewDelegate-->
+<a name="//apple_ref/occ/intf/JKExpandTableViewDelegate"></a><table id="hd_outermost_table" height="100%" width="100%"><tr><td valign='top' id='tocMenu' src='toc.html'></td>
+<td id='bodyContents' valign='top'>
+<a name="top"></a>
+<h1><a name="JKExpandTableViewDelegate">JKExpandTableViewDelegate</a></h1>
+<div class="spec_sheet_info_box"><table cellspacing="0" class="specbox">
+<tr><td scope="row"><b>Extends&nbsp;Protocol:</b></td><td><div style="margin-bottom:1px"><div class="content_text"><!-- a logicalPath="//apple_ref/occ/intf/NSObject" machineGenerated="true" -->NSObject<!-- /a --></div></div></td></tr>
+<tr><td scope="row"><b>Declared In:</b></td><td><div style="margin-bottom:1px"><div class="content_text"><a href="../../index.html" logicalPath="//apple_ref/doc/header/JKExpandTableView.h" target="_top" machineGenerated="true">JKExpandTableView.h</a></div></div></td></tr>
+</table></div>
+<h2>Introduction</h2>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/intf/JKExpandTableViewDelegate;name=start --><p>Users of this class must implement this protocol.
+<!-- headerDoc=discussion;uid=//apple_ref/occ/intf/JKExpandTableViewDelegate;name=end --><!-- end discussion -->
+<hr class="afterClassOrHeaderInfo"><br><a name="HeaderDoc_methods"></a>
+<h2 class="h2tight">Methods</h2>
+<dl>
+<dt><tt><a href="index.html#//apple_ref/occ/intfm/JKExpandTableViewDelegate/backgroundColor" target="_top">-backgroundColor</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/intfm/JKExpandTableViewDelegate/fontForChildren" target="_top">-fontForChildren</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/intfm/JKExpandTableViewDelegate/fontForParents" target="_top">-fontForParents</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/intfm/JKExpandTableViewDelegate/foregroundColor" target="_top">-foregroundColor</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/intfm/JKExpandTableViewDelegate/selectionIndicatorIcon" target="_top">-selectionIndicatorIcon</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/intfm/JKExpandTableViewDelegate/shouldSupportMultipleSelectableChildrenAtParentIndex:" target="_top">-shouldSupportMultipleSelectableChildrenAtParentIndex:</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView:didDeselectCellAtChildIndex:withInParentCellIndex:" target="_top">-tableView:didDeselectCellAtChildIndex:withInParentCellIndex:</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView:didSelectCellAtChildIndex:withInParentCellIndex:" target="_top">-tableView:didSelectCellAtChildIndex:withInParentCellIndex:</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView:didSelectParentCellAtIndex:" target="_top">-tableView:didSelectParentCellAtIndex:</a></tt></dt>
+<dd></dd>
+</dl>
+<hr class="betweenAPIEntries"><!-- headerDoc=intfm;  uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/backgroundColor;   name=JKExpandTableViewDelegate::backgroundColor -->
+<a name="//apple_ref/occ/intfm/JKExpandTableViewDelegate/backgroundColor"></a>
+<h3><a name="backgroundColor">backgroundColor</a></h3>
+<hr class="afterName"><div class='declaration_indent'>
+<pre><tt>@optional</tt>
+<br>- (<!-- a logicalPath="//apple_ref/occ/cl/UIColor //apple_ref/occ/tdef/UIColor //apple_ref/occ/tag/UIColor //apple_ref/occ/struct/UIColor //apple_ref/occ/intf/UIColor //apple_ref/doc/anysymbol/UIColor" machineGenerated="true" --><span class="type">UIColor</span><!-- /a --> <span class="type">*</span>) <!-- a logicalPath="//apple_ref/occ/econst/backgroundColor //apple_ref/occ/data/JKExpandTableViewDelegate/backgroundColor //apple_ref/occ/data/backgroundColor //apple_ref/occ/clconst/JKExpandTableViewDelegate/backgroundColor " machineGenerated="true" --><span class="var">backgroundColor</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value --><p>UIColor
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/backgroundColor;name=start --><p>Optional method to set custom foreground color.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/backgroundColor;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries"><!-- headerDoc=intfm;  uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/fontForChildren;   name=JKExpandTableViewDelegate::fontForChildren -->
+<a name="//apple_ref/occ/intfm/JKExpandTableViewDelegate/fontForChildren"></a>
+<h3><a name="fontForChildren">fontForChildren</a></h3>
+<hr class="afterName"><div class='declaration_indent'>
+<pre><tt>@optional</tt>
+<br>- (<!-- a logicalPath="//apple_ref/occ/cl/UIFont //apple_ref/occ/tdef/UIFont //apple_ref/occ/tag/UIFont //apple_ref/occ/struct/UIFont //apple_ref/occ/intf/UIFont //apple_ref/doc/anysymbol/UIFont" machineGenerated="true" --><span class="type">UIFont</span><!-- /a --> <span class="type">*</span>) <!-- a logicalPath="//apple_ref/occ/econst/fontForChildren //apple_ref/occ/data/JKExpandTableViewDelegate/fontForChildren //apple_ref/occ/data/fontForChildren //apple_ref/occ/clconst/JKExpandTableViewDelegate/fontForChildren " machineGenerated="true" --><span class="var">fontForChildren</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value --><p>UIFont for the label on the children cells
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/fontForChildren;name=start --><p>Optional method to set custom Font for the labels on the Children cells.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/fontForChildren;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries"><!-- headerDoc=intfm;  uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/fontForParents;   name=JKExpandTableViewDelegate::fontForParents -->
+<a name="//apple_ref/occ/intfm/JKExpandTableViewDelegate/fontForParents"></a>
+<h3><a name="fontForParents">fontForParents</a></h3>
+<hr class="afterName"><div class='declaration_indent'>
+<pre><tt>@optional</tt>
+<br>- (<!-- a logicalPath="//apple_ref/occ/cl/UIFont //apple_ref/occ/tdef/UIFont //apple_ref/occ/tag/UIFont //apple_ref/occ/struct/UIFont //apple_ref/occ/intf/UIFont //apple_ref/doc/anysymbol/UIFont" machineGenerated="true" --><span class="type">UIFont</span><!-- /a --> <span class="type">*</span>) <!-- a logicalPath="//apple_ref/occ/econst/fontForParents //apple_ref/occ/data/JKExpandTableViewDelegate/fontForParents //apple_ref/occ/data/fontForParents //apple_ref/occ/clconst/JKExpandTableViewDelegate/fontForParents " machineGenerated="true" --><span class="var">fontForParents</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value --><p>UIFont for the label on the parent cells
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/fontForParents;name=start --><p>Optional method to set custom font for the labels on the Parent cells.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/fontForParents;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries"><!-- headerDoc=intfm;  uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/foregroundColor;   name=JKExpandTableViewDelegate::foregroundColor -->
+<a name="//apple_ref/occ/intfm/JKExpandTableViewDelegate/foregroundColor"></a>
+<h3><a name="foregroundColor">foregroundColor</a></h3>
+<hr class="afterName"><div class='declaration_indent'>
+<pre><tt>@optional</tt>
+<br>- (<!-- a logicalPath="//apple_ref/occ/cl/UIColor //apple_ref/occ/tdef/UIColor //apple_ref/occ/tag/UIColor //apple_ref/occ/struct/UIColor //apple_ref/occ/intf/UIColor //apple_ref/doc/anysymbol/UIColor" machineGenerated="true" --><span class="type">UIColor</span><!-- /a --> <span class="type">*</span>) <!-- a logicalPath="//apple_ref/occ/econst/foregroundColor //apple_ref/occ/data/JKExpandTableViewDelegate/foregroundColor //apple_ref/occ/data/foregroundColor //apple_ref/occ/clconst/JKExpandTableViewDelegate/foregroundColor " machineGenerated="true" --><span class="var">foregroundColor</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value --><p>UIColor 
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/foregroundColor;name=start --><p>Optional method to set custom foreground color.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/foregroundColor;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries"><!-- headerDoc=intfm;  uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/selectionIndicatorIcon;   name=JKExpandTableViewDelegate::selectionIndicatorIcon -->
+<a name="//apple_ref/occ/intfm/JKExpandTableViewDelegate/selectionIndicatorIcon"></a>
+<h3><a name="selectionIndicatorIcon">selectionIndicatorIcon</a></h3>
+<hr class="afterName"><div class='declaration_indent'>
+<pre><tt>@optional</tt>
+<br>- (<!-- a logicalPath="//apple_ref/occ/cl/UIImage //apple_ref/occ/tdef/UIImage //apple_ref/occ/tag/UIImage //apple_ref/occ/struct/UIImage //apple_ref/occ/intf/UIImage //apple_ref/doc/anysymbol/UIImage" machineGenerated="true" --><span class="type">UIImage</span><!-- /a --> <span class="type">*</span>) <!-- a logicalPath="//apple_ref/occ/econst/selectionIndicatorIcon //apple_ref/occ/data/JKExpandTableViewDelegate/selectionIndicatorIcon //apple_ref/occ/data/selectionIndicatorIcon //apple_ref/occ/clconst/JKExpandTableViewDelegate/selectionIndicatorIcon " machineGenerated="true" --><span class="var">selectionIndicatorIcon</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value --><p>UIImage
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/selectionIndicatorIcon;name=start --><p>Optional method to set a custom selection indicator icon.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/selectionIndicatorIcon;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries"><!-- headerDoc=intfm;  uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/shouldSupportMultipleSelectableChildrenAtParentIndex:;   name=JKExpandTableViewDelegate::shouldSupportMultipleSelectableChildrenAtParentIndex: -->
+<a name="//apple_ref/occ/intfm/JKExpandTableViewDelegate/shouldSupportMultipleSelectableChildrenAtParentIndex:"></a>
+<h3><a name="shouldSupportMultipleSelectableChildrenAtParentIndex:">shouldSupportMultipleSelectableChildrenAtParentIndex:</a></h3>
+<hr class="afterName"><div class='declaration_indent'>
+<pre><tt>@required</tt>
+<br>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/intf/BOOL //apple_ref/doc/anysymbol/BOOL" machineGenerated="true" --><span class="type">BOOL</span><!-- /a -->) 
+        <!-- a logicalPath="//apple_ref/occ/instm/JKExpandTableViewDelegate/shouldSupportMultipleSelectableChildrenAtParentIndex //apple_ref/occ/clm/JKExpandTableViewDelegate/shouldSupportMultipleSelectableChildrenAtParentIndex //apple_ref/occ/intfcm/JKExpandTableViewDelegate/shouldSupportMultipleSelectableChildrenAtParentIndex //apple_ref/occ/intfm/JKExpandTableViewDelegate/shouldSupportMultipleSelectableChildrenAtParentIndex //apple_ref/occ/func/shouldSupportMultipleSelectableChildrenAtParentIndex //apple_ref/occ/ftmplt/JKExpandTableViewDelegate/shouldSupportMultipleSelectableChildrenAtParentIndex //apple_ref/occ/defn/shouldSupportMultipleSelectableChildrenAtParentIndex //apple_ref/occ/macro/shouldSupportMultipleSelectableChildrenAtParentIndex //apple_ref/doc/anysymbol/shouldSupportMultipleSelectableChildrenAtParentIndex" machineGenerated="true" --><span class="function">shouldSupportMultipleSelectableChildrenAtParentIndex</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSInteger //apple_ref/occ/tdef/NSInteger //apple_ref/occ/tag/NSInteger //apple_ref/occ/struct/NSInteger //apple_ref/occ/intf/NSInteger //apple_ref/doc/anysymbol/NSInteger" machineGenerated="true" --><span class="type">NSInteger</span><!-- /a -->) <!-- a logicalPath="//apple_ref/occ/econst/parentIndex //apple_ref/occ/data/JKExpandTableViewDelegate/parentIndex //apple_ref/occ/data/parentIndex //apple_ref/occ/clconst/JKExpandTableViewDelegate/parentIndex " machineGenerated="true" --><span class="var">parentIndex</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class='param_indent'>
+<dl>
+<dt><!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/JKExpandTableViewDelegate/shouldSupportMultipleSelectableChildrenAtParentIndex:/parentIndex;   name=shouldSupportMultipleSelectableChildrenAtParentIndex:::parentIndex -->
+<a name="//apple_ref/doc/methodparam/JKExpandTableViewDelegate/shouldSupportMultipleSelectableChildrenAtParentIndex:/parentIndex"></a>
+<code>parentIndex</code></dt><dd><p>The parent index in question</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value --><p>YES if more than one child under this parent can be selected at the same time.  Otherwise, return NO.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/shouldSupportMultipleSelectableChildrenAtParentIndex:;name=start --><p>Within a single JKExpandTableView, it is permissible to have a mix of multi-selectables and non-multi-selectables.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/shouldSupportMultipleSelectableChildrenAtParentIndex:;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries"><!-- headerDoc=intfm;  uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView:didDeselectCellAtChildIndex:withInParentCellIndex:;   name=JKExpandTableViewDelegate::tableView:didDeselectCellAtChildIndex:withInParentCellIndex: -->
+<a name="//apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView:didDeselectCellAtChildIndex:withInParentCellIndex:"></a>
+<h3><a name="tableView:didDeselectCellAtChildIndex:withInParentCellIndex:">tableView:didDeselectCellAtChildIndex:withInParentCellIndex:</a></h3>
+<hr class="afterName"><div class='declaration_indent'>
+<pre><tt>@optional</tt>
+<br>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//apple_ref/occ/instm/JKExpandTableViewDelegate/tableView //apple_ref/occ/clm/JKExpandTableViewDelegate/tableView //apple_ref/occ/intfcm/JKExpandTableViewDelegate/tableView //apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView //apple_ref/occ/func/tableView //apple_ref/occ/ftmplt/JKExpandTableViewDelegate/tableView //apple_ref/occ/defn/tableView //apple_ref/occ/macro/tableView //apple_ref/doc/anysymbol/tableView" machineGenerated="true" --><span class="function">tableView</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/UITableView //apple_ref/occ/tdef/UITableView //apple_ref/occ/tag/UITableView //apple_ref/occ/struct/UITableView //apple_ref/occ/intf/UITableView //apple_ref/doc/anysymbol/UITableView" machineGenerated="true" --><span class="type">UITableView</span><!-- /a --> <span class="type">*</span>)<span class="param">tableView</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/JKExpandTableViewDelegate/didDeselectCellAtChildIndex //apple_ref/occ/clm/JKExpandTableViewDelegate/didDeselectCellAtChildIndex //apple_ref/occ/intfcm/JKExpandTableViewDelegate/didDeselectCellAtChildIndex //apple_ref/occ/intfm/JKExpandTableViewDelegate/didDeselectCellAtChildIndex //apple_ref/occ/func/didDeselectCellAtChildIndex //apple_ref/occ/ftmplt/JKExpandTableViewDelegate/didDeselectCellAtChildIndex //apple_ref/occ/defn/didDeselectCellAtChildIndex //apple_ref/occ/macro/didDeselectCellAtChildIndex //apple_ref/doc/anysymbol/didDeselectCellAtChildIndex" machineGenerated="true" --><span class="function">didDeselectCellAtChildIndex</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSInteger //apple_ref/occ/tdef/NSInteger //apple_ref/occ/tag/NSInteger //apple_ref/occ/struct/NSInteger //apple_ref/occ/intf/NSInteger //apple_ref/doc/anysymbol/NSInteger" machineGenerated="true" --><span class="type">NSInteger</span><!-- /a -->) <span class="param">childIndex</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/JKExpandTableViewDelegate/withInParentCellIndex //apple_ref/occ/clm/JKExpandTableViewDelegate/withInParentCellIndex //apple_ref/occ/intfcm/JKExpandTableViewDelegate/withInParentCellIndex //apple_ref/occ/intfm/JKExpandTableViewDelegate/withInParentCellIndex //apple_ref/occ/func/withInParentCellIndex //apple_ref/occ/ftmplt/JKExpandTableViewDelegate/withInParentCellIndex //apple_ref/occ/defn/withInParentCellIndex //apple_ref/occ/macro/withInParentCellIndex //apple_ref/doc/anysymbol/withInParentCellIndex" machineGenerated="true" --><span class="function">withInParentCellIndex</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSInteger //apple_ref/occ/tdef/NSInteger //apple_ref/occ/tag/NSInteger //apple_ref/occ/struct/NSInteger //apple_ref/occ/intf/NSInteger //apple_ref/doc/anysymbol/NSInteger" machineGenerated="true" --><span class="type">NSInteger</span><!-- /a -->) <!-- a logicalPath="//apple_ref/occ/econst/parentIndex //apple_ref/occ/data/JKExpandTableViewDelegate/parentIndex //apple_ref/occ/data/parentIndex //apple_ref/occ/clconst/JKExpandTableViewDelegate/parentIndex " machineGenerated="true" --><span class="var">parentIndex</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class='param_indent'>
+<dl>
+<dt><!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/JKExpandTableViewDelegate/tableView:didDeselectCellAtChildIndex:withInParentCellIndex:/childIndex;   name=tableView:didDeselectCellAtChildIndex:withInParentCellIndex:::childIndex -->
+<a name="//apple_ref/doc/methodparam/JKExpandTableViewDelegate/tableView:didDeselectCellAtChildIndex:withInParentCellIndex:/childIndex"></a>
+<code>childIndex</code></dt><dd><p>The child index in question</dd>
+<dt><!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/JKExpandTableViewDelegate/tableView:didDeselectCellAtChildIndex:withInParentCellIndex:/parentIndex;   name=tableView:didDeselectCellAtChildIndex:withInParentCellIndex:::parentIndex -->
+<a name="//apple_ref/doc/methodparam/JKExpandTableViewDelegate/tableView:didDeselectCellAtChildIndex:withInParentCellIndex:/parentIndex"></a>
+<code>parentIndex</code></dt><dd><p>The parent index in question</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView:didDeselectCellAtChildIndex:withInParentCellIndex:;name=start --><p>Optional method the delegate should implement to get notified when a child is clicked on.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView:didDeselectCellAtChildIndex:withInParentCellIndex:;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries"><!-- headerDoc=intfm;  uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView:didSelectCellAtChildIndex:withInParentCellIndex:;   name=JKExpandTableViewDelegate::tableView:didSelectCellAtChildIndex:withInParentCellIndex: -->
+<a name="//apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView:didSelectCellAtChildIndex:withInParentCellIndex:"></a>
+<h3><a name="tableView:didSelectCellAtChildIndex:withInParentCellIndex:">tableView:didSelectCellAtChildIndex:withInParentCellIndex:</a></h3>
+<hr class="afterName"><div class='declaration_indent'>
+<pre><tt>@optional</tt>
+<br>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//apple_ref/occ/instm/JKExpandTableViewDelegate/tableView //apple_ref/occ/clm/JKExpandTableViewDelegate/tableView //apple_ref/occ/intfcm/JKExpandTableViewDelegate/tableView //apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView //apple_ref/occ/func/tableView //apple_ref/occ/ftmplt/JKExpandTableViewDelegate/tableView //apple_ref/occ/defn/tableView //apple_ref/occ/macro/tableView //apple_ref/doc/anysymbol/tableView" machineGenerated="true" --><span class="function">tableView</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/UITableView //apple_ref/occ/tdef/UITableView //apple_ref/occ/tag/UITableView //apple_ref/occ/struct/UITableView //apple_ref/occ/intf/UITableView //apple_ref/doc/anysymbol/UITableView" machineGenerated="true" --><span class="type">UITableView</span><!-- /a --> <span class="type">*</span>)<span class="param">tableView</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/JKExpandTableViewDelegate/didSelectCellAtChildIndex //apple_ref/occ/clm/JKExpandTableViewDelegate/didSelectCellAtChildIndex //apple_ref/occ/intfcm/JKExpandTableViewDelegate/didSelectCellAtChildIndex //apple_ref/occ/intfm/JKExpandTableViewDelegate/didSelectCellAtChildIndex //apple_ref/occ/func/didSelectCellAtChildIndex //apple_ref/occ/ftmplt/JKExpandTableViewDelegate/didSelectCellAtChildIndex //apple_ref/occ/defn/didSelectCellAtChildIndex //apple_ref/occ/macro/didSelectCellAtChildIndex //apple_ref/doc/anysymbol/didSelectCellAtChildIndex" machineGenerated="true" --><span class="function">didSelectCellAtChildIndex</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSInteger //apple_ref/occ/tdef/NSInteger //apple_ref/occ/tag/NSInteger //apple_ref/occ/struct/NSInteger //apple_ref/occ/intf/NSInteger //apple_ref/doc/anysymbol/NSInteger" machineGenerated="true" --><span class="type">NSInteger</span><!-- /a -->) <span class="param">childIndex</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/JKExpandTableViewDelegate/withInParentCellIndex //apple_ref/occ/clm/JKExpandTableViewDelegate/withInParentCellIndex //apple_ref/occ/intfcm/JKExpandTableViewDelegate/withInParentCellIndex //apple_ref/occ/intfm/JKExpandTableViewDelegate/withInParentCellIndex //apple_ref/occ/func/withInParentCellIndex //apple_ref/occ/ftmplt/JKExpandTableViewDelegate/withInParentCellIndex //apple_ref/occ/defn/withInParentCellIndex //apple_ref/occ/macro/withInParentCellIndex //apple_ref/doc/anysymbol/withInParentCellIndex" machineGenerated="true" --><span class="function">withInParentCellIndex</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSInteger //apple_ref/occ/tdef/NSInteger //apple_ref/occ/tag/NSInteger //apple_ref/occ/struct/NSInteger //apple_ref/occ/intf/NSInteger //apple_ref/doc/anysymbol/NSInteger" machineGenerated="true" --><span class="type">NSInteger</span><!-- /a -->) <!-- a logicalPath="//apple_ref/occ/econst/parentIndex //apple_ref/occ/data/JKExpandTableViewDelegate/parentIndex //apple_ref/occ/data/parentIndex //apple_ref/occ/clconst/JKExpandTableViewDelegate/parentIndex " machineGenerated="true" --><span class="var">parentIndex</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class='param_indent'>
+<dl>
+<dt><!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/JKExpandTableViewDelegate/tableView:didSelectCellAtChildIndex:withInParentCellIndex:/childIndex;   name=tableView:didSelectCellAtChildIndex:withInParentCellIndex:::childIndex -->
+<a name="//apple_ref/doc/methodparam/JKExpandTableViewDelegate/tableView:didSelectCellAtChildIndex:withInParentCellIndex:/childIndex"></a>
+<code>childIndex</code></dt><dd><p>The child index in question</dd>
+<dt><!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/JKExpandTableViewDelegate/tableView:didSelectCellAtChildIndex:withInParentCellIndex:/parentIndex;   name=tableView:didSelectCellAtChildIndex:withInParentCellIndex:::parentIndex -->
+<a name="//apple_ref/doc/methodparam/JKExpandTableViewDelegate/tableView:didSelectCellAtChildIndex:withInParentCellIndex:/parentIndex"></a>
+<code>parentIndex</code></dt><dd><p>The parent index in question</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView:didSelectCellAtChildIndex:withInParentCellIndex:;name=start --><p>Optional method the delegate should implement to get notified when a child is clicked on.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView:didSelectCellAtChildIndex:withInParentCellIndex:;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries"><!-- headerDoc=intfm;  uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView:didSelectParentCellAtIndex:;   name=JKExpandTableViewDelegate::tableView:didSelectParentCellAtIndex: -->
+<a name="//apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView:didSelectParentCellAtIndex:"></a>
+<h3><a name="tableView:didSelectParentCellAtIndex:">tableView:didSelectParentCellAtIndex:</a></h3>
+<hr class="afterName"><div class='declaration_indent'>
+<pre><tt>@optional</tt>
+<br>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->) <!-- a logicalPath="//apple_ref/occ/instm/JKExpandTableViewDelegate/tableView //apple_ref/occ/clm/JKExpandTableViewDelegate/tableView //apple_ref/occ/intfcm/JKExpandTableViewDelegate/tableView //apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView //apple_ref/occ/func/tableView //apple_ref/occ/ftmplt/JKExpandTableViewDelegate/tableView //apple_ref/occ/defn/tableView //apple_ref/occ/macro/tableView //apple_ref/doc/anysymbol/tableView" machineGenerated="true" --><span class="function">tableView</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/UITableView //apple_ref/occ/tdef/UITableView //apple_ref/occ/tag/UITableView //apple_ref/occ/struct/UITableView //apple_ref/occ/intf/UITableView //apple_ref/doc/anysymbol/UITableView" machineGenerated="true" --><span class="type">UITableView</span><!-- /a --> <span class="type">*</span>)<span class="param">tableView</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/JKExpandTableViewDelegate/didSelectParentCellAtIndex //apple_ref/occ/clm/JKExpandTableViewDelegate/didSelectParentCellAtIndex //apple_ref/occ/intfcm/JKExpandTableViewDelegate/didSelectParentCellAtIndex //apple_ref/occ/intfm/JKExpandTableViewDelegate/didSelectParentCellAtIndex //apple_ref/occ/func/didSelectParentCellAtIndex //apple_ref/occ/ftmplt/JKExpandTableViewDelegate/didSelectParentCellAtIndex //apple_ref/occ/defn/didSelectParentCellAtIndex //apple_ref/occ/macro/didSelectParentCellAtIndex //apple_ref/doc/anysymbol/didSelectParentCellAtIndex" machineGenerated="true" --><span class="function">didSelectParentCellAtIndex</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSInteger //apple_ref/occ/tdef/NSInteger //apple_ref/occ/tag/NSInteger //apple_ref/occ/struct/NSInteger //apple_ref/occ/intf/NSInteger //apple_ref/doc/anysymbol/NSInteger" machineGenerated="true" --><span class="type">NSInteger</span><!-- /a -->) <!-- a logicalPath="//apple_ref/occ/econst/parentIndex //apple_ref/occ/data/JKExpandTableViewDelegate/parentIndex //apple_ref/occ/data/parentIndex //apple_ref/occ/clconst/JKExpandTableViewDelegate/parentIndex " machineGenerated="true" --><span class="var">parentIndex</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class='param_indent'>
+<dl>
+<dt><!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/JKExpandTableViewDelegate/tableView:didSelectParentCellAtIndex:/parentIndex;   name=tableView:didSelectParentCellAtIndex:::parentIndex -->
+<a name="//apple_ref/doc/methodparam/JKExpandTableViewDelegate/tableView:didSelectParentCellAtIndex:/parentIndex"></a>
+<code>parentIndex</code></dt><dd><p>The parent index in question</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView:didSelectParentCellAtIndex:;name=start --><p>Optional method to get notified when a parent is clicked on.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/occ/intfm/JKExpandTableViewDelegate/tableView:didSelectParentCellAtIndex:;name=end --><!-- end discussion -->
+<p class="gapBeforeFooter">&nbsp;</p><hr class="afterFooter"><div class="hd_copyright_and_timestamp">
+<p class="hd_timestamp">Last Updated: Wednesday, July 31, 2013
+</p></div>
+</td></tr></table>
+</body></html>
