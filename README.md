@@ -10,6 +10,8 @@ JKExpandTableView is a subclass of UITableView for iOS (iPhone and iPad) that ma
 
 Compatibility: iOS 4.0+.  Requires ARC.
 
+For more information, please see the [github pages site](http://jackkwok.github.io/JKExpandTableView) for this project.
+
 ## Technical Overview
 
 The interface definition of JKExpandTableView takes inspirations from UITableView.
@@ -40,7 +42,8 @@ A parent cell is a top level cell.  Each parent cell can have one or more childr
 ## Getting Started
 It takes minutes to create your own nested expandable table view, with a money back guarantee! :)
 
-
+## Documentation
+See documentation under doc/ folder.
 
 ## Author
 Jack Kwok @jackkwok http://twitter.com/jackkwok.  I welcome your feedback.
