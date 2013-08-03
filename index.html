@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>JKExpandTableView by jackkwok</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>JKExpandTableView</h1>
+        <h2>Expandable Nested Table View for iOS</h2>
+        <a href="https://github.com/jackkwok/JKExpandTableView" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="jkexpandtableview-for-ios" class="anchor" href="#jkexpandtableview-for-ios"><span class="octicon octicon-link"></span></a>JKExpandTableView for iOS</h1>
+
+<p><img src="https://raw.github.com/jackkwok/JKExpandTableView/master/README_IMG/screen1_default.png" alt="Screenshot"><img src="https://raw.github.com/jackkwok/JKExpandTableView/master/README_IMG/screen5_custom_icon_color.png" alt="Screenshot"></p>
+
+<h2>
+<a name="summary" class="anchor" href="#summary"><span class="octicon octicon-link"></span></a>Summary</h2>
+
+<p>JKExpandTableView is a subclass of UITableView for iOS (iPhone and iPad) that makes it easy to create a table view with expandable/collapsable rows.  Recursive nesting is not supported.</p>
+
+<p>Compatibility: iOS 4.0+.  Requires ARC.</p>
+
+<h2>
+<a name="technical-overview" class="anchor" href="#technical-overview"><span class="octicon octicon-link"></span></a>Technical Overview</h2>
+
+<p>The interface definition of JKExpandTableView takes inspirations from UITableView.</p>
+
+<p>Analogous to UITableView, a JKExpandTableView object must have an object that acts as a data source and an object that acts as a delegate.</p>
+
+<p>The delegate must adopt the JKExpandTableViewDelegate protocol and the data source must adopt the JKExpandTableViewDataSource protocol.</p>
+
+<h2>
+<a name="sample-project" class="anchor" href="#sample-project"><span class="octicon octicon-link"></span></a>Sample Project</h2>
+
+<p>A pedagogical example project is provided for your learning enjoyment.</p>
+
+<h2>
+<a name="key-features" class="anchor" href="#key-features"><span class="octicon octicon-link"></span></a>Key Features</h2>
+
+<ul>
+<li>Multi-selectable sub-table.</li>
+<li>Single-selectable sub-table.</li>
+<li>Mixing multi-selectable and single-selectable sub-tables within a single JKExpandTableView.</li>
+<li>Customizable background/foreground colors and fonts.</li>
+<li>Optional customizable icons (item icon, selection indicator icon).</li>
+</ul><h2>
+<a name="implementation-details" class="anchor" href="#implementation-details"><span class="octicon octicon-link"></span></a>Implementation Details</h2>
+
+<p>This overview is written for liked-minded developers interested in contributing to this library.</p>
+
+<p>A parent cell is a top level cell.  Each parent cell can have one or more children cells nested under it.  Behind the scene, the collection of children cells under each parent is implemented via its own UITableView.</p>
+
+<h2>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>It takes minutes to create your own nested expandable table view, with a money back guarantee! :)</p>
+
+<h2>
+<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h2>
+
+<p>Jack Kwok <a href="https://github.com/jackkwok" class="user-mention">@jackkwok</a> <a href="http://twitter.com/jackkwok">http://twitter.com/jackkwok</a>.  I welcome your feedback.
+<a href="http://www.mobileideafactory.com">http://www.mobileideafactory.com</a>
+Specialities: Architecture, iOS, Android.</p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>MIT License.  As stated under the LICENSE file.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/jackkwok/JKExpandTableView/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/jackkwok/JKExpandTableView/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/jackkwok/JKExpandTableView"></a> is maintained by <a href="https://github.com/jackkwok">jackkwok</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-42940402-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
