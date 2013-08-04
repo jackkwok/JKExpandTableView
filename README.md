@@ -18,3 +18,5 @@ Specialities: Architecture, iOS, Android.
 
 ## License
 MIT License.  As stated under the LICENSE file.
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/583de44d5903e99a84cbefc79def9871 "githalytics.com")](http://githalytics.com/jackkwok/JKExpandTableView)
