@@ -14,7 +14,7 @@ For more information, please see the associated [project website](http://jackkwo
 ## Author
 Jack Kwok [@jackkwok](http://twitter.com/jackkwok).
 
-[My Blog](http://www.mobileideafactory.com)
+[The Moblie Idea Factory Blog](http://www.mobileideafactory.com)
 
 Specialities: Architecture, iOS, Android.
 
