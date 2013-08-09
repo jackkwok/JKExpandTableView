@@ -8,7 +8,7 @@ JKExpandTableView is a subclass of UITableView for iOS that makes it easy to cre
 
 Compatibility: iOS 4.0+ (iPhone and iPad).  Requires ARC.
 
-For more information, please see the associated [project website](http://jackkwok.github.io/JKExpandTableView).
+**[Guide to getting started using JKExpandTableView](http://jackkwok.github.io/JKExpandTableView)**<br/>
 
 
 ## Author
@@ -18,7 +18,6 @@ Jack Kwok [@jackkwok](http://twitter.com/jackkwok).
 
 Specialities: Architecture, iOS, Android.
 
-I welcome your feedback.
 
 ## License
 MIT License.  As stated under the LICENSE file.
