@@ -7,6 +7,7 @@
 //
 
 #import "JKParentTableViewCell.h"
+#import "UIImage+JKExpandTableView.h"
 
 @implementation JKParentTableViewCell
 
@@ -97,7 +98,7 @@
 - (void)selectionIndicatorState:(BOOL) visible {
     //
     if (!self.selectionIndicatorImg) {
-        self.selectionIndicatorImg = [UIImage imageNamed:@"checkmark"];
+        self.selectionIndicatorImg = [UIImage expandTableViewImageNamed:@"checkmark"];
     }
     self.selectionIndicatorImgView.image = self.selectionIndicatorImg;  // probably better to init this elsewhere
     if (visible) {

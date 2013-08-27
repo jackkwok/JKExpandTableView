@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BCB63C7717CCC79C00CB4300 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBDDA6D17CCB0F7005E4024 /* CoreFoundation.framework */; };
+		BCB63C8217CCC7AF00CB4300 /* arrow-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BCBDDA1F17CCAD7A005E4024 /* arrow-icon.png */; };
+		BCB63C8317CCC7AF00CB4300 /* arrow-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCBDDA2017CCAD7A005E4024 /* arrow-icon@2x.png */; };
+		BCB63C8417CCC7AF00CB4300 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = BCBDDA2117CCAD7A005E4024 /* checkmark.png */; };
+		BCB63C8517CCC7AF00CB4300 /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCBDDA2217CCAD7A005E4024 /* checkmark@2x.png */; };
+		BCBDD9F717CCAD19005E4024 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBDD9F617CCAD19005E4024 /* Foundation.framework */; };
+		BCBDDA2F17CCAD7A005E4024 /* JKExpandTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBDDA2417CCAD7A005E4024 /* JKExpandTableView.m */; };
+		BCBDDA3017CCAD7A005E4024 /* JKMultiSelectSubTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBDDA2617CCAD7A005E4024 /* JKMultiSelectSubTableViewCell.m */; };
+		BCBDDA3117CCAD7A005E4024 /* JKParentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBDDA2817CCAD7A005E4024 /* JKParentTableViewCell.m */; };
+		BCBDDA3217CCAD7A005E4024 /* JKSingleSelectSubTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBDDA2A17CCAD7A005E4024 /* JKSingleSelectSubTableViewCell.m */; };
+		BCBDDA3317CCAD7A005E4024 /* JKSubTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBDDA2C17CCAD7A005E4024 /* JKSubTableViewCell.m */; };
+		BCBDDA3417CCAD7A005E4024 /* JKSubTableViewCellCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBDDA2E17CCAD7A005E4024 /* JKSubTableViewCellCell.m */; };
+		BCBDDA3517CCADBB005E4024 /* JKExpandTableView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BCBDDA2317CCAD7A005E4024 /* JKExpandTableView.h */; };
+		BCBDDA3617CCADBB005E4024 /* JKMultiSelectSubTableViewCell.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BCBDDA2517CCAD7A005E4024 /* JKMultiSelectSubTableViewCell.h */; };
+		BCBDDA3717CCADBB005E4024 /* JKParentTableViewCell.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BCBDDA2717CCAD7A005E4024 /* JKParentTableViewCell.h */; };
+		BCBDDA3817CCADBB005E4024 /* JKSingleSelectSubTableViewCell.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BCBDDA2917CCAD7A005E4024 /* JKSingleSelectSubTableViewCell.h */; };
+		BCBDDA3917CCADBB005E4024 /* JKSubTableViewCell.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BCBDDA2B17CCAD7A005E4024 /* JKSubTableViewCell.h */; };
+		BCBDDA3A17CCADBB005E4024 /* JKSubTableViewCellCell.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BCBDDA2D17CCAD7A005E4024 /* JKSubTableViewCellCell.h */; };
+		BCBDDA3C17CCADC7005E4024 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBDDA3B17CCADC7005E4024 /* UIKit.framework */; };
+		BCBDDA3E17CCADDF005E4024 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBDDA3D17CCADDF005E4024 /* CoreGraphics.framework */; };
+		BCBDDA8A17CCB445005E4024 /* NSBundle+JKExpandTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBDDA8917CCB445005E4024 /* NSBundle+JKExpandTableView.m */; };
+		BCBDDA8D17CCB455005E4024 /* UIImage+JKExpandTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBDDA8C17CCB455005E4024 /* UIImage+JKExpandTableView.m */; };
+		BCBDDA8E17CCB4DB005E4024 /* NSBundle+JKExpandTableView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BCBDDA8817CCB445005E4024 /* NSBundle+JKExpandTableView.h */; };
+		BCBDDA8F17CCB4DB005E4024 /* UIImage+JKExpandTableView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BCBDDA8B17CCB455005E4024 /* UIImage+JKExpandTableView.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BCBDD9F117CCAD19005E4024 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				BCBDDA8E17CCB4DB005E4024 /* NSBundle+JKExpandTableView.h in CopyFiles */,
+				BCBDDA8F17CCB4DB005E4024 /* UIImage+JKExpandTableView.h in CopyFiles */,
+				BCBDDA3517CCADBB005E4024 /* JKExpandTableView.h in CopyFiles */,
+				BCBDDA3617CCADBB005E4024 /* JKMultiSelectSubTableViewCell.h in CopyFiles */,
+				BCBDDA3717CCADBB005E4024 /* JKParentTableViewCell.h in CopyFiles */,
+				BCBDDA3817CCADBB005E4024 /* JKSingleSelectSubTableViewCell.h in CopyFiles */,
+				BCBDDA3917CCADBB005E4024 /* JKSubTableViewCell.h in CopyFiles */,
+				BCBDDA3A17CCADBB005E4024 /* JKSubTableViewCellCell.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BCB63C7617CCC79C00CB4300 /* JKExpandTableViewResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKExpandTableViewResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCBDD9F317CCAD19005E4024 /* libJKExpandTableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJKExpandTableView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCBDD9F617CCAD19005E4024 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BCBDD9FA17CCAD19005E4024 /* JKExpandTableView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JKExpandTableView-Prefix.pch"; sourceTree = "<group>"; };
+		BCBDDA1F17CCAD7A005E4024 /* arrow-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-icon.png"; sourceTree = "<group>"; };
+		BCBDDA2017CCAD7A005E4024 /* arrow-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-icon@2x.png"; sourceTree = "<group>"; };
+		BCBDDA2117CCAD7A005E4024 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		BCBDDA2217CCAD7A005E4024 /* checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@2x.png"; sourceTree = "<group>"; };
+		BCBDDA2317CCAD7A005E4024 /* JKExpandTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKExpandTableView.h; sourceTree = "<group>"; };
+		BCBDDA2417CCAD7A005E4024 /* JKExpandTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKExpandTableView.m; sourceTree = "<group>"; };
+		BCBDDA2517CCAD7A005E4024 /* JKMultiSelectSubTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKMultiSelectSubTableViewCell.h; sourceTree = "<group>"; };
+		BCBDDA2617CCAD7A005E4024 /* JKMultiSelectSubTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKMultiSelectSubTableViewCell.m; sourceTree = "<group>"; };
+		BCBDDA2717CCAD7A005E4024 /* JKParentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKParentTableViewCell.h; sourceTree = "<group>"; };
+		BCBDDA2817CCAD7A005E4024 /* JKParentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKParentTableViewCell.m; sourceTree = "<group>"; };
+		BCBDDA2917CCAD7A005E4024 /* JKSingleSelectSubTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSingleSelectSubTableViewCell.h; sourceTree = "<group>"; };
+		BCBDDA2A17CCAD7A005E4024 /* JKSingleSelectSubTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSingleSelectSubTableViewCell.m; sourceTree = "<group>"; };
+		BCBDDA2B17CCAD7A005E4024 /* JKSubTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSubTableViewCell.h; sourceTree = "<group>"; };
+		BCBDDA2C17CCAD7A005E4024 /* JKSubTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSubTableViewCell.m; sourceTree = "<group>"; };
+		BCBDDA2D17CCAD7A005E4024 /* JKSubTableViewCellCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSubTableViewCellCell.h; sourceTree = "<group>"; };
+		BCBDDA2E17CCAD7A005E4024 /* JKSubTableViewCellCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSubTableViewCellCell.m; sourceTree = "<group>"; };
+		BCBDDA3B17CCADC7005E4024 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BCBDDA3D17CCADDF005E4024 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BCBDDA6D17CCB0F7005E4024 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		BCBDDA8817CCB445005E4024 /* NSBundle+JKExpandTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+JKExpandTableView.h"; sourceTree = "<group>"; };
+		BCBDDA8917CCB445005E4024 /* NSBundle+JKExpandTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+JKExpandTableView.m"; sourceTree = "<group>"; };
+		BCBDDA8B17CCB455005E4024 /* UIImage+JKExpandTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JKExpandTableView.h"; sourceTree = "<group>"; };
+		BCBDDA8C17CCB455005E4024 /* UIImage+JKExpandTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JKExpandTableView.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCB63C7317CCC79C00CB4300 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCB63C7717CCC79C00CB4300 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCBDD9F017CCAD19005E4024 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCBDDA3E17CCADDF005E4024 /* CoreGraphics.framework in Frameworks */,
+				BCBDDA3C17CCADC7005E4024 /* UIKit.framework in Frameworks */,
+				BCBDD9F717CCAD19005E4024 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BCBDD9EA17CCAD19005E4024 = {
+			isa = PBXGroup;
+			children = (
+				BCBDD9F817CCAD19005E4024 /* JKExpandTableView */,
+				BCBDD9F517CCAD19005E4024 /* Frameworks */,
+				BCBDD9F417CCAD19005E4024 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BCBDD9F417CCAD19005E4024 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCBDD9F317CCAD19005E4024 /* libJKExpandTableView.a */,
+				BCB63C7617CCC79C00CB4300 /* JKExpandTableViewResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCBDD9F517CCAD19005E4024 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCBDDA3D17CCADDF005E4024 /* CoreGraphics.framework */,
+				BCBDDA3B17CCADC7005E4024 /* UIKit.framework */,
+				BCBDD9F617CCAD19005E4024 /* Foundation.framework */,
+				BCBDDA6D17CCB0F7005E4024 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCBDD9F817CCAD19005E4024 /* JKExpandTableView */ = {
+			isa = PBXGroup;
+			children = (
+				BCBDDA1E17CCAD7A005E4024 /* img */,
+				BCBDDA8717CCB425005E4024 /* Extensions */,
+				BCBDDA2317CCAD7A005E4024 /* JKExpandTableView.h */,
+				BCBDDA2417CCAD7A005E4024 /* JKExpandTableView.m */,
+				BCBDDA2517CCAD7A005E4024 /* JKMultiSelectSubTableViewCell.h */,
+				BCBDDA2617CCAD7A005E4024 /* JKMultiSelectSubTableViewCell.m */,
+				BCBDDA2717CCAD7A005E4024 /* JKParentTableViewCell.h */,
+				BCBDDA2817CCAD7A005E4024 /* JKParentTableViewCell.m */,
+				BCBDDA2917CCAD7A005E4024 /* JKSingleSelectSubTableViewCell.h */,
+				BCBDDA2A17CCAD7A005E4024 /* JKSingleSelectSubTableViewCell.m */,
+				BCBDDA2B17CCAD7A005E4024 /* JKSubTableViewCell.h */,
+				BCBDDA2C17CCAD7A005E4024 /* JKSubTableViewCell.m */,
+				BCBDDA2D17CCAD7A005E4024 /* JKSubTableViewCellCell.h */,
+				BCBDDA2E17CCAD7A005E4024 /* JKSubTableViewCellCell.m */,
+				BCBDD9F917CCAD19005E4024 /* Supporting Files */,
+			);
+			path = JKExpandTableView;
+			sourceTree = "<group>";
+		};
+		BCBDD9F917CCAD19005E4024 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCBDD9FA17CCAD19005E4024 /* JKExpandTableView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BCBDDA1E17CCAD7A005E4024 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				BCBDDA1F17CCAD7A005E4024 /* arrow-icon.png */,
+				BCBDDA2017CCAD7A005E4024 /* arrow-icon@2x.png */,
+				BCBDDA2117CCAD7A005E4024 /* checkmark.png */,
+				BCBDDA2217CCAD7A005E4024 /* checkmark@2x.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		BCBDDA8717CCB425005E4024 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BCBDDA8817CCB445005E4024 /* NSBundle+JKExpandTableView.h */,
+				BCBDDA8917CCB445005E4024 /* NSBundle+JKExpandTableView.m */,
+				BCBDDA8B17CCB455005E4024 /* UIImage+JKExpandTableView.h */,
+				BCBDDA8C17CCB455005E4024 /* UIImage+JKExpandTableView.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCB63C7517CCC79C00CB4300 /* JKExpandTableViewResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCB63C8117CCC79C00CB4300 /* Build configuration list for PBXNativeTarget "JKExpandTableViewResources" */;
+			buildPhases = (
+				BCB63C7217CCC79C00CB4300 /* Sources */,
+				BCB63C7317CCC79C00CB4300 /* Frameworks */,
+				BCB63C7417CCC79C00CB4300 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JKExpandTableViewResources;
+			productName = JKExpandTableViewResources;
+			productReference = BCB63C7617CCC79C00CB4300 /* JKExpandTableViewResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		BCBDD9F217CCAD19005E4024 /* JKExpandTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCBDDA1817CCAD19005E4024 /* Build configuration list for PBXNativeTarget "JKExpandTableView" */;
+			buildPhases = (
+				BCBDD9EF17CCAD19005E4024 /* Sources */,
+				BCBDD9F017CCAD19005E4024 /* Frameworks */,
+				BCBDD9F117CCAD19005E4024 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JKExpandTableView;
+			productName = JKExpandTableView;
+			productReference = BCBDD9F317CCAD19005E4024 /* libJKExpandTableView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCBDD9EB17CCAD19005E4024 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Jack-Kwok";
+			};
+			buildConfigurationList = BCBDD9EE17CCAD19005E4024 /* Build configuration list for PBXProject "JKExpandTableView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BCBDD9EA17CCAD19005E4024;
+			productRefGroup = BCBDD9F417CCAD19005E4024 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCBDD9F217CCAD19005E4024 /* JKExpandTableView */,
+				BCB63C7517CCC79C00CB4300 /* JKExpandTableViewResources */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCB63C7417CCC79C00CB4300 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCB63C8217CCC7AF00CB4300 /* arrow-icon.png in Resources */,
+				BCB63C8317CCC7AF00CB4300 /* arrow-icon@2x.png in Resources */,
+				BCB63C8417CCC7AF00CB4300 /* checkmark.png in Resources */,
+				BCB63C8517CCC7AF00CB4300 /* checkmark@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCB63C7217CCC79C00CB4300 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCBDD9EF17CCAD19005E4024 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCBDDA2F17CCAD7A005E4024 /* JKExpandTableView.m in Sources */,
+				BCBDDA3017CCAD7A005E4024 /* JKMultiSelectSubTableViewCell.m in Sources */,
+				BCBDDA3117CCAD7A005E4024 /* JKParentTableViewCell.m in Sources */,
+				BCBDDA3217CCAD7A005E4024 /* JKSingleSelectSubTableViewCell.m in Sources */,
+				BCBDDA3317CCAD7A005E4024 /* JKSubTableViewCell.m in Sources */,
+				BCBDDA3417CCAD7A005E4024 /* JKSubTableViewCellCell.m in Sources */,
+				BCBDDA8A17CCB445005E4024 /* NSBundle+JKExpandTableView.m in Sources */,
+				BCBDDA8D17CCB455005E4024 /* UIImage+JKExpandTableView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BCB63C7F17CCC79C00CB4300 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JKExpandTableViewResources/JKExpandTableViewResources-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		BCB63C8017CCC79C00CB4300 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JKExpandTableViewResources/JKExpandTableViewResources-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		BCBDDA1617CCAD19005E4024 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BCBDDA1717CCAD19005E4024 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCBDDA1917CCAD19005E4024 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/JKExpandTableView.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JKExpandTableView/JKExpandTableView-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BCBDDA1A17CCAD19005E4024 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/JKExpandTableView.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JKExpandTableView/JKExpandTableView-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCB63C8117CCC79C00CB4300 /* Build configuration list for PBXNativeTarget "JKExpandTableViewResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCB63C7F17CCC79C00CB4300 /* Debug */,
+				BCB63C8017CCC79C00CB4300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCBDD9EE17CCAD19005E4024 /* Build configuration list for PBXProject "JKExpandTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCBDDA1617CCAD19005E4024 /* Debug */,
+				BCBDDA1717CCAD19005E4024 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCBDDA1817CCAD19005E4024 /* Build configuration list for PBXNativeTarget "JKExpandTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCBDDA1917CCAD19005E4024 /* Debug */,
+				BCBDDA1A17CCAD19005E4024 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCBDD9EB17CCAD19005E4024 /* Project object */;
+}

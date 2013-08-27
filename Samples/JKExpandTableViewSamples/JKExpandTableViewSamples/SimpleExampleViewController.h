@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JKExpandTableView.h"
+#import <JKExpandTableView/JKExpandTableView.h>
 
 @interface SimpleExampleViewController : UIViewController
     <JKExpandTableViewDelegate, JKExpandTableViewDataSource>

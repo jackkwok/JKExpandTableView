@@ -8,6 +8,7 @@
 
 #import "JKSubTableViewCell.h"
 #import "JKSubTableViewCellCell.h"
+#import "UIImage+JKExpandTableView.h"
 
 @implementation JKSubTableViewCell
 
@@ -78,7 +79,7 @@
 
 - (UIImage *) selectionIndicatorImgOrDefault {
     if (!self.selectionIndicatorImg) {
-        self.selectionIndicatorImg = [UIImage imageNamed:@"checkmark"];
+        self.selectionIndicatorImg = [UIImage expandTableViewImageNamed:@"checkmark"];
     }
     return self.selectionIndicatorImg;
 }
