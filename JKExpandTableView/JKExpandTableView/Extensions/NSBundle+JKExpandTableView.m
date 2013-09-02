@@ -14,7 +14,7 @@
     static dispatch_once_t onceToken;
     static NSBundle *myLibraryResourcesBundle = nil;
     dispatch_once(&onceToken, ^{
-        myLibraryResourcesBundle = [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:@"JKImageResources" withExtension:@"bundle"]];
+        myLibraryResourcesBundle = [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:@"JKExpandTableViewResources" withExtension:@"bundle"]];
     });
     return myLibraryResourcesBundle;
 }
