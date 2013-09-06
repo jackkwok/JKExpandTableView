@@ -24,6 +24,8 @@
 - (NSString *) labelForChildIndex:(NSInteger)childIndex underParentIndex:(NSInteger)parentIndex;
 // get the icon image
 - (UIImage *) iconForChildIndex:(NSInteger)childIndex underParentIndex:(NSInteger)parentIndex;
+// get padding
+- (CGFloat) selectionIconPaddingForParentIndex:(NSInteger)parentIndex;
 @end
 
 @interface JKSubTableViewCell : UITableViewCell <UITableViewDataSource,UITableViewDelegate> {
@@ -33,11 +35,13 @@
     UIColor *fgColor;
     UIFont *font;
     UIImage *selectionIndicatorImg;
+    CGFloat selectionIndicatorPadding;
 }
 
 @property(nonatomic,strong) UITableView *insideTableView;
 @property(nonatomic,weak,getter = getDelegate, setter = setDelegate:) id<JKSubTableViewCellDelegate> delegate;
 @property(nonatomic) NSInteger parentIndex;
+@property(nonatomic) CGFloat selectionIndicatorPadding;
 @property(nonatomic,strong) UIImage *selectionIndicatorImg;
 
 @property(nonatomic,strong,getter = getSubTableForegroundColor, setter = setSubTableForegroundColor:) UIColor *fgColor;

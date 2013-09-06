@@ -13,6 +13,7 @@
     UILabel *label;
     UIImageView *selectionIndicatorImgView;
     NSInteger parentIndex;
+    CGFloat selectionIndicatorPadding;
 }
 
 @property (nonatomic,strong) UIImageView *iconImage;
@@ -20,6 +21,7 @@
 @property (nonatomic,strong) UIImage *selectionIndicatorImg;
 @property (nonatomic,strong) UIImageView *selectionIndicatorImgView;
 @property (nonatomic) NSInteger parentIndex;
+@property (nonatomic) CGFloat selectionIndicatorPadding;
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier;
 - (void)setupDisplay;

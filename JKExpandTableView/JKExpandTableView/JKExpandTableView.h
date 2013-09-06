@@ -124,6 +124,14 @@
 
 /*! Optional method
  
+ @param childIndex The child index in question
+ @param parentIndex The parent index in question
+ @return CGFloat padding for selected indicator image.
+ */
+- (CGFloat) selectionIconPaddingForParentIndex:(NSInteger) parentIndex;
+
+/*! Optional method
+ 
  @return YES if the parent icon should be rotated 90 degrees when parent is toggled.  Otherwise, return NO.
  */
 - (BOOL) shouldRotateIconForParentOnToggle;

@@ -12,7 +12,7 @@
 
 @implementation JKSubTableViewCell
 
-@synthesize insideTableView, selectionIndicatorImg;
+@synthesize insideTableView, selectionIndicatorImg, selectionIndicatorPadding;
 
 #define HEIGHT_FOR_CELL 44.0
 
@@ -111,6 +111,7 @@
     NSInteger row = [indexPath row];
     cell.titleLabel.text = [self.delegate labelForChildIndex:row underParentIndex:self.parentIndex];
     cell.iconImage.image = [self.delegate iconForChildIndex:row underParentIndex:self.parentIndex];
+    cell.selectionIndicatorPadding = [self.delegate selectionIconPaddingForParentIndex:self.parentIndex];
     cell.selectionIndicatorImg.image = [self selectionIndicatorImgOrDefault];
     
     BOOL isRowSelected = [self.delegate isSelectedForChildIndex:row underParentIndex:self.parentIndex];
