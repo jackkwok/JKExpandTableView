@@ -275,6 +275,9 @@
             [cell.label setFont:font];
         }
         
+        CGFloat selectionIndicatorPadding = [self.dataSourceDelegate selectionIconPaddingForParentIndex:parentIndex];
+        [cell setSelectionIndicatorPadding:selectionIndicatorPadding];
+        
         NSString * labelStr = [self.dataSourceDelegate labelForParentCellAtIndex:parentIndex];
         [[cell label] setText:labelStr];
         
@@ -373,6 +376,15 @@
         return [self.dataSourceDelegate iconForCellAtChildIndex:childIndex withinParentCellIndex:parentIndex];
     } else {
         return nil;
+    }
+}
+
+- (CGFloat) selectionIconPaddingForParentIndex:(NSInteger)parentIndex
+{
+    if ([self.dataSourceDelegate respondsToSelector:@selector(selectionIconPaddingForParentIndex:)]) {
+        return [self.dataSourceDelegate selectionIconPaddingForParentIndex:parentIndex];
+    } else {
+        return 16.f;
     }
 }
 

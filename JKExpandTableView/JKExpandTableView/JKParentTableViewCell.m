@@ -7,10 +7,11 @@
 //
 
 #import "JKParentTableViewCell.h"
+#import "UIImage+JKExpandTableView.h"
 
 @implementation JKParentTableViewCell
 
-@synthesize label,iconImage,selectionIndicatorImgView,parentIndex,selectionIndicatorImg;
+@synthesize label,iconImage,selectionIndicatorImgView,parentIndex,selectionIndicatorImg,selectionIndicatorPadding;
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier; {
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
@@ -65,16 +66,19 @@
     
     CGFloat sidePadding = 6.0;
     CGFloat icon2LabelPadding = 6.0;
-    CGFloat checkMarkPadding = 16.0;
+    if (selectionIndicatorPadding == 0)
+    {
+        selectionIndicatorPadding = 16.0;
+    }
     [self.contentView setAutoresizesSubviews:YES];
 
     self.iconImage.frame = CGRectMake(sidePadding, (contentAreaHeight - iconHeight)/2, iconWidth, iconHeight);
     CGFloat XOffset = iconWidth + sidePadding + icon2LabelPadding;
     
-    CGFloat labelWidth = contentAreaWidth - XOffset - checkMarkWidth - checkMarkPadding;
+    CGFloat labelWidth = contentAreaWidth - XOffset - checkMarkWidth - selectionIndicatorPadding;
     self.label.frame = CGRectMake(XOffset, 0, labelWidth, contentAreaHeight);
     //self.label.backgroundColor = [UIColor redColor];
-    self.selectionIndicatorImgView.frame = CGRectMake(contentAreaWidth - checkMarkWidth - checkMarkPadding,
+    self.selectionIndicatorImgView.frame = CGRectMake(contentAreaWidth - checkMarkWidth - selectionIndicatorPadding,
                                                  (contentRect.size.height/2)-(checkMarkHeight/2),
                                                  checkMarkWidth,
                                                  checkMarkHeight);
@@ -97,7 +101,7 @@
 - (void)selectionIndicatorState:(BOOL) visible {
     //
     if (!self.selectionIndicatorImg) {
-        self.selectionIndicatorImg = [UIImage imageNamed:@"checkmark"];
+        self.selectionIndicatorImg = [UIImage expandTableViewImageNamed:@"checkmark"];
     }
     self.selectionIndicatorImgView.image = self.selectionIndicatorImg;  // probably better to init this elsewhere
     if (visible) {

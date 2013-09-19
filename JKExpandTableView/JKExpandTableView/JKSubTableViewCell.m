@@ -8,10 +8,11 @@
 
 #import "JKSubTableViewCell.h"
 #import "JKSubTableViewCellCell.h"
+#import "UIImage+JKExpandTableView.h"
 
 @implementation JKSubTableViewCell
 
-@synthesize insideTableView, selectionIndicatorImg;
+@synthesize insideTableView, selectionIndicatorImg, selectionIndicatorPadding;
 
 #define HEIGHT_FOR_CELL 44.0
 
@@ -78,7 +79,7 @@
 
 - (UIImage *) selectionIndicatorImgOrDefault {
     if (!self.selectionIndicatorImg) {
-        self.selectionIndicatorImg = [UIImage imageNamed:@"checkmark"];
+        self.selectionIndicatorImg = [UIImage expandTableViewImageNamed:@"checkmark"];
     }
     return self.selectionIndicatorImg;
 }
@@ -110,6 +111,7 @@
     NSInteger row = [indexPath row];
     cell.titleLabel.text = [self.delegate labelForChildIndex:row underParentIndex:self.parentIndex];
     cell.iconImage.image = [self.delegate iconForChildIndex:row underParentIndex:self.parentIndex];
+    cell.selectionIndicatorPadding = [self.delegate selectionIconPaddingForParentIndex:self.parentIndex];
     cell.selectionIndicatorImg.image = [self selectionIndicatorImgOrDefault];
     
     BOOL isRowSelected = [self.delegate isSelectedForChildIndex:row underParentIndex:self.parentIndex];

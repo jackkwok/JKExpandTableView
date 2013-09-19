@@ -12,11 +12,13 @@
     UIImageView *iconImage;
     UILabel *titleLabel;
     UIImageView *selectionIndicatorImg;
+    CGFloat selectionIndicatorPadding;
 }
 
 @property (nonatomic,strong) UIImageView *iconImage;
 @property (nonatomic,strong) UILabel *titleLabel;
 @property (nonatomic,strong) UIImageView *selectionIndicatorImg;
+@property (nonatomic) CGFloat selectionIndicatorPadding;
 
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier;

@@ -9,7 +9,7 @@
 #import "JKSubTableViewCellCell.h"
 
 @implementation JKSubTableViewCellCell
-@synthesize titleLabel, iconImage, selectionIndicatorImg;
+@synthesize titleLabel, iconImage, selectionIndicatorImg, selectionIndicatorPadding;
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
@@ -63,7 +63,10 @@
     
     CGFloat sidePadding = 22.0;
     CGFloat icon2LabelPadding = 6.0;
-    CGFloat checkMarkPadding = 16.0;
+    if (selectionIndicatorPadding == 0)
+    {
+        selectionIndicatorPadding = 16.0;
+    }
     [self.contentView setAutoresizesSubviews:YES];
     
     self.iconImage.frame = CGRectMake(sidePadding, (contentAreaHeight - iconHeight)/2, iconWidth, iconHeight);
@@ -71,13 +74,13 @@
     
     CGFloat XOffset = iconWidth + sidePadding + icon2LabelPadding;
     
-    CGFloat labelWidth = contentAreaWidth - XOffset - checkMarkWidth - checkMarkPadding;
+    CGFloat labelWidth = contentAreaWidth - XOffset - checkMarkWidth - selectionIndicatorPadding;
     self.titleLabel.frame = CGRectMake(XOffset, 0, labelWidth, contentAreaHeight);
 
     //self.titleLabel.backgroundColor = [UIColor purpleColor];
     //self.selectionIndicatorImg.backgroundColor = [UIColor yellowColor];
     
-    self.selectionIndicatorImg.frame = CGRectMake(contentAreaWidth - checkMarkWidth - checkMarkPadding,
+    self.selectionIndicatorImg.frame = CGRectMake(contentAreaWidth - checkMarkWidth - selectionIndicatorPadding,
                                                       (contentRect.size.height/2)-(checkMarkHeight/2),
                                                       checkMarkWidth,
                                                       checkMarkHeight);

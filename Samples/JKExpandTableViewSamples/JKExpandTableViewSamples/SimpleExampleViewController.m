@@ -7,6 +7,7 @@
 //
 
 #import "SimpleExampleViewController.h"
+#import <JKExpandTableView/UIImage+JKExpandTableView.h>
 
 @interface SimpleExampleViewController ()
 
@@ -133,7 +134,7 @@
 }
 
 - (UIImage *) iconForParentCellAtIndex:(NSInteger) parentIndex {
-    return [UIImage imageNamed:@"arrow-icon"];
+    return [UIImage expandTableViewImageNamed:@"arrow-icon"];
 }
 
 - (UIImage *) iconForCellAtChildIndex:(NSInteger) childIndex withinParentCellIndex:(NSInteger) parentIndex {
