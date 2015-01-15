@@ -103,9 +103,9 @@
     JKSubTableViewCellCell *cell = (JKSubTableViewCellCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[JKSubTableViewCellCell alloc] initWithReuseIdentifier:CellIdentifier];
-    } else {
-        NSLog(@"reusing existing JKSubTableViewCellCell");
-    }
+		} //else {
+			//NSLog(@"reusing existing JKSubTableViewCellCell");
+			//}
     
     NSInteger row = [indexPath row];
     cell.titleLabel.text = [self.delegate labelForChildIndex:row underParentIndex:self.parentIndex];
