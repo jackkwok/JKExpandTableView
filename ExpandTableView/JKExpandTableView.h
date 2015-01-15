@@ -25,7 +25,7 @@
 
 @optional
 /*! Optional method the delegate should implement to get notified when a child is clicked on.
-
+ 
  @param childIndex The child index in question
  @param parentIndex The parent index in question
  */
@@ -38,13 +38,13 @@
 - (void) tableView:(UITableView *)tableView didDeselectCellAtChildIndex:(NSInteger) childIndex withInParentCellIndex:(NSInteger) parentIndex;
 /*! Optional method to get notified when a parent is clicked on.
  
-  @param parentIndex The parent index in question
+ @param parentIndex The parent index in question
  */
 - (void) tableView:(UITableView *)tableView didSelectParentCellAtIndex:(NSInteger) parentIndex;
 
 /*! Optional method to set custom foreground color.
  
- @return UIColor 
+ @return UIColor
  */
 - (UIColor *) foregroundColor;
 /*! Optional method to set custom foreground color.
@@ -58,7 +58,7 @@
  */
 - (UIImage *) selectionIndicatorIcon;
 /*! Optional method to set custom font for the labels on the Parent cells.
-
+ 
  @return UIFont for the label on the parent cells
  */
 - (UIFont *) fontForParents;
@@ -130,14 +130,19 @@
 @end
 
 @interface JKExpandTableView : UITableView
-    <UITableViewDataSource, UITableViewDelegate, JKSubTableViewCellDelegate> {
-    __weak id tableViewDelegate;
-    __weak id dataSourceDelegate;
-    NSMutableArray * expansionStates;
+<UITableViewDataSource, UITableViewDelegate, JKSubTableViewCellDelegate> {
+	__weak id tableViewDelegate;
+	__weak id dataSourceDelegate;
+	NSMutableArray * expansionStates;
 }
 
 @property(nonatomic,weak) id<JKExpandTableViewDelegate> tableViewDelegate;
 @property(nonatomic,weak,getter = getDataSourceDelegate, setter = setDataSourceDelegate:) id<JKExpandTableViewDataSource> dataSourceDelegate;
 @property(nonatomic,strong) NSMutableArray * expansionStates;
+
+/*
+ Collapse all the parent rows
+ */
+- (void) collapseParents;
 
 @end
