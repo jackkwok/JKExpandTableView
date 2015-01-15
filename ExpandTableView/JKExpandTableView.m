@@ -145,7 +145,7 @@
 			i++;
 		}
 	}
-	NSLog(@"parentIndexForRow row: %d parentIndex: %d", row, parentIndex);
+	//NSLog(@"parentIndexForRow row: %d parentIndex: %d", row, parentIndex);
 	return parentIndex;
 }
 
@@ -275,9 +275,9 @@
 		JKParentTableViewCell *cell = (JKParentTableViewCell *)[self dequeueReusableCellWithIdentifier:CellIdentifier_Parent];
 		if (cell == nil) {
 			cell = [[JKParentTableViewCell alloc] initWithReuseIdentifier:CellIdentifier_Parent];
-		} else {
-			NSLog(@"reusing existing JKParentTableViewCell");
-		}
+		} //else {
+			//NSLog(@"reusing existing JKParentTableViewCell");
+			//}
 		
 		[self configureCell:cell withParentIndex:parentIndex];
 		
@@ -292,7 +292,7 @@
 #pragma mark - Table view delegate
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSInteger row = indexPath.row;
-	NSLog(@"heightForRowAtIndexPath row: %d", row);
+	//NSLog(@"heightForRowAtIndexPath row: %d", row);
 	// if cell is expanded, the cell height would be a multiple of the number of child cells
 	BOOL isExpansionCell = [self isExpansionCell:row];
 	if (isExpansionCell) {
