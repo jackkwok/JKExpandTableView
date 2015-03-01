@@ -38,21 +38,13 @@
 		B7E3107F17A0D9DE0049FD09 /* SimpleExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E3107D17A0D9DE0049FD09 /* SimpleExampleViewController.m */; };
 		B7E3108017A0D9DE0049FD09 /* SimpleExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E3107E17A0D9DE0049FD09 /* SimpleExampleViewController.xib */; };
 		B7E3108317A0D9E80049FD09 /* green_checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = B7E3108217A0D9E80049FD09 /* green_checkmark.png */; };
-		B7E3108417A0DA4B0049FD09 /* JKAppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = B7E3103917A0D9340049FD09 /* JKAppDelegate.h */; };
-		B7E3108517A0DA4B0049FD09 /* SimpleExampleViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = B7E3107C17A0D9DE0049FD09 /* SimpleExampleViewController.h */; };
 		B7E3108617A0DA4B0049FD09 /* SimpleExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E3107D17A0D9DE0049FD09 /* SimpleExampleViewController.m */; };
 		B7E3108717A0DB400049FD09 /* SimpleExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E3107E17A0D9DE0049FD09 /* SimpleExampleViewController.xib */; };
-		B7E3108817A0DB7F0049FD09 /* JKExpandTableView.h in Sources */ = {isa = PBXBuildFile; fileRef = B7E3106617A0D9910049FD09 /* JKExpandTableView.h */; };
 		B7E3108917A0DB7F0049FD09 /* JKExpandTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E3106717A0D9910049FD09 /* JKExpandTableView.m */; };
-		B7E3108A17A0DB7F0049FD09 /* JKMultiSelectSubTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = B7E3106817A0D9910049FD09 /* JKMultiSelectSubTableViewCell.h */; };
 		B7E3108B17A0DB7F0049FD09 /* JKMultiSelectSubTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E3106917A0D9910049FD09 /* JKMultiSelectSubTableViewCell.m */; };
-		B7E3108C17A0DB7F0049FD09 /* JKParentTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = B7E3106A17A0D9910049FD09 /* JKParentTableViewCell.h */; };
 		B7E3108D17A0DB7F0049FD09 /* JKParentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E3106B17A0D9910049FD09 /* JKParentTableViewCell.m */; };
-		B7E3108E17A0DB7F0049FD09 /* JKSingleSelectSubTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = B7E3106C17A0D9910049FD09 /* JKSingleSelectSubTableViewCell.h */; };
 		B7E3108F17A0DB7F0049FD09 /* JKSingleSelectSubTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E3106D17A0D9910049FD09 /* JKSingleSelectSubTableViewCell.m */; };
-		B7E3109017A0DB7F0049FD09 /* JKSubTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = B7E3106E17A0D9910049FD09 /* JKSubTableViewCell.h */; };
 		B7E3109117A0DB7F0049FD09 /* JKSubTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E3106F17A0D9910049FD09 /* JKSubTableViewCell.m */; };
-		B7E3109217A0DB7F0049FD09 /* JKSubTableViewCellCell.h in Sources */ = {isa = PBXBuildFile; fileRef = B7E3107017A0D9910049FD09 /* JKSubTableViewCellCell.h */; };
 		B7E3109317A0DB7F0049FD09 /* JKSubTableViewCellCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E3107117A0D9910049FD09 /* JKSubTableViewCellCell.m */; };
 		B7E3109417A0DB8B0049FD09 /* arrow-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B7E3106217A0D9910049FD09 /* arrow-icon.png */; };
 		B7E3109517A0DB8B0049FD09 /* arrow-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7E3106317A0D9910049FD09 /* arrow-icon@2x.png */; };
@@ -400,20 +392,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7E3108817A0DB7F0049FD09 /* JKExpandTableView.h in Sources */,
 				B7E3108917A0DB7F0049FD09 /* JKExpandTableView.m in Sources */,
-				B7E3108A17A0DB7F0049FD09 /* JKMultiSelectSubTableViewCell.h in Sources */,
 				B7E3108B17A0DB7F0049FD09 /* JKMultiSelectSubTableViewCell.m in Sources */,
-				B7E3108C17A0DB7F0049FD09 /* JKParentTableViewCell.h in Sources */,
 				B7E3108D17A0DB7F0049FD09 /* JKParentTableViewCell.m in Sources */,
-				B7E3108E17A0DB7F0049FD09 /* JKSingleSelectSubTableViewCell.h in Sources */,
 				B7E3108F17A0DB7F0049FD09 /* JKSingleSelectSubTableViewCell.m in Sources */,
-				B7E3109017A0DB7F0049FD09 /* JKSubTableViewCell.h in Sources */,
 				B7E3109117A0DB7F0049FD09 /* JKSubTableViewCell.m in Sources */,
-				B7E3109217A0DB7F0049FD09 /* JKSubTableViewCellCell.h in Sources */,
 				B7E3109317A0DB7F0049FD09 /* JKSubTableViewCellCell.m in Sources */,
-				B7E3108417A0DA4B0049FD09 /* JKAppDelegate.h in Sources */,
-				B7E3108517A0DA4B0049FD09 /* SimpleExampleViewController.h in Sources */,
 				B7E3108617A0DA4B0049FD09 /* SimpleExampleViewController.m in Sources */,
 				B7E3103717A0D9340049FD09 /* main.m in Sources */,
 				B7E3103B17A0D9340049FD09 /* JKAppDelegate.m in Sources */,
