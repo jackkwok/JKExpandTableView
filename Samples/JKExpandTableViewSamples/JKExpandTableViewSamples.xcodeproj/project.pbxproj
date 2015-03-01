@@ -21,7 +21,6 @@
 		B7E3103D17A0D9340049FD09 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B7E3103C17A0D9340049FD09 /* Default.png */; };
 		B7E3103F17A0D9340049FD09 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7E3103E17A0D9340049FD09 /* Default@2x.png */; };
 		B7E3104117A0D9340049FD09 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7E3104017A0D9340049FD09 /* Default-568h@2x.png */; };
-		B7E3104917A0D9340049FD09 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E3104817A0D9340049FD09 /* SenTestingKit.framework */; };
 		B7E3104A17A0D9350049FD09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E3102A17A0D9340049FD09 /* UIKit.framework */; };
 		B7E3104B17A0D9350049FD09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E3102C17A0D9340049FD09 /* Foundation.framework */; };
 		B7E3105317A0D9350049FD09 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7E3105117A0D9350049FD09 /* InfoPlist.strings */; };
@@ -92,7 +91,6 @@
 		B7E3103E17A0D9340049FD09 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B7E3104017A0D9340049FD09 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B7E3104717A0D9340049FD09 /* JKExpandTableViewSamplesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKExpandTableViewSamplesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7E3104817A0D9340049FD09 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		B7E3105017A0D9350049FD09 /* JKExpandTableViewSamplesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JKExpandTableViewSamplesTests-Info.plist"; sourceTree = "<group>"; };
 		B7E3105217A0D9350049FD09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B7E3105417A0D9350049FD09 /* JKExpandTableViewSamplesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKExpandTableViewSamplesTests.h; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7E3104917A0D9340049FD09 /* SenTestingKit.framework in Frameworks */,
 				B7E3104A17A0D9350049FD09 /* UIKit.framework in Frameworks */,
 				B7E3104B17A0D9350049FD09 /* Foundation.framework in Frameworks */,
 			);
@@ -170,7 +167,6 @@
 				B7E3102A17A0D9340049FD09 /* UIKit.framework */,
 				B7E3102C17A0D9340049FD09 /* Foundation.framework */,
 				B7E3102E17A0D9340049FD09 /* CoreGraphics.framework */,
-				B7E3104817A0D9340049FD09 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -313,7 +309,7 @@
 			name = JKExpandTableViewSamplesTests;
 			productName = JKExpandTableViewSamplesTests;
 			productReference = B7E3104717A0D9340049FD09 /* JKExpandTableViewSamplesTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -322,6 +318,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = JK;
+				LastTestingUpgradeCheck = 0610;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Jack Kwok";
 			};
@@ -493,7 +490,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -518,7 +515,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -555,13 +552,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JKExpandTableViewSamples/JKExpandTableViewSamples-Prefix.pch";
 				INFOPLIST_FILE = "JKExpandTableViewSamplesTests/JKExpandTableViewSamplesTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -572,13 +569,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JKExpandTableViewSamples/JKExpandTableViewSamples-Prefix.pch";
 				INFOPLIST_FILE = "JKExpandTableViewSamplesTests/JKExpandTableViewSamplesTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

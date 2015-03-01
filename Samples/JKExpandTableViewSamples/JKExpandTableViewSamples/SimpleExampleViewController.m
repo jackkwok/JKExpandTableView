@@ -120,11 +120,11 @@
 }
 
 - (NSString *) labelForParentCellAtIndex:(NSInteger) parentIndex {
-    return [NSString stringWithFormat:@"parent %d", parentIndex];
+    return [NSString stringWithFormat:@"parent %ld", (long)parentIndex];
 }
 
 - (NSString *) labelForCellAtChildIndex:(NSInteger) childIndex withinParentCellIndex:(NSInteger) parentIndex {
-    return [NSString stringWithFormat:@"child %d of parent %d", childIndex, parentIndex];
+    return [NSString stringWithFormat:@"child %ld of parent %ld", (long)childIndex, (long)parentIndex];
 }
 
 - (BOOL) shouldDisplaySelectedStateForCellAtChildIndex:(NSInteger) childIndex withinParentCellIndex:(NSInteger) parentIndex {

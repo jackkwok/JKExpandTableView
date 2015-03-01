@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Jack Kwok. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface JKExpandTableViewSamplesTests : SenTestCase
+@interface JKExpandTableViewSamplesTests : XCTestCase
 
 @end

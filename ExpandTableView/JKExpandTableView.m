@@ -145,7 +145,7 @@
             i++;
         }
     }
-    NSLog(@"parentIndexForRow row: %d parentIndex: %d", row, parentIndex);
+    NSLog(@"parentIndexForRow row: %ld parentIndex: %ld", (long)row, (long)parentIndex);
     return parentIndex;
 }
 
@@ -209,7 +209,7 @@
                 [cell setSelectionIndicatorImg:[self.tableViewDelegate selectionIndicatorIcon]];
             }
             
-            NSLog(@"cellForRowAtIndexPath MultiSelect parentIndex: %d", parentIndex);
+            NSLog(@"cellForRowAtIndexPath MultiSelect parentIndex: %ld", (long)parentIndex);
             [cell setParentIndex:parentIndex];
             [cell setDelegate:self];
             [cell reload];
@@ -241,7 +241,7 @@
                 [cell setSubTableFont:font];
             }
             
-            NSLog(@"cellForRowAtIndexPath SingleSelect parentIndex: %d", parentIndex);
+            NSLog(@"cellForRowAtIndexPath SingleSelect parentIndex: %ld", (long)parentIndex);
             [cell setParentIndex:parentIndex];
             [cell setDelegate:self];
             [cell reload];
@@ -294,7 +294,7 @@
 #pragma mark - Table view delegate
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger row = indexPath.row;
-    NSLog(@"heightForRowAtIndexPath row: %d", row);
+    NSLog(@"heightForRowAtIndexPath row: %ld", (long)row);
     // if cell is expanded, the cell height would be a multiple of the number of child cells
     BOOL isExpansionCell = [self isExpansionCell:row];
     if (isExpansionCell) {
