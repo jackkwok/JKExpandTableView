@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061FD71D1AD40B0E0015E9CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E3102E17A0D9340049FD09 /* CoreGraphics.framework */; };
 		B7C7C7D417A21C160046DDCE /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C7C7D317A21C160046DDCE /* cat.png */; };
 		B7C7C7D617A21C1F0046DDCE /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C7C7D517A21C1F0046DDCE /* heart.png */; };
 		B7D377F317A327400001F5BC /* SimpleExampleViewControllerPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7D377F217A327400001F5BC /* SimpleExampleViewControllerPad.xib */; };
@@ -82,7 +83,7 @@
 		B7E3103C17A0D9340049FD09 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B7E3103E17A0D9340049FD09 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B7E3104017A0D9340049FD09 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		B7E3104717A0D9340049FD09 /* JKExpandTableViewSamplesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKExpandTableViewSamplesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7E3104717A0D9340049FD09 /* JKExpandTableViewSamplesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = JKExpandTableViewSamplesTests.octest; path = JKExpandTableViewSamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E3105017A0D9350049FD09 /* JKExpandTableViewSamplesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JKExpandTableViewSamplesTests-Info.plist"; sourceTree = "<group>"; };
 		B7E3105217A0D9350049FD09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B7E3105417A0D9350049FD09 /* JKExpandTableViewSamplesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKExpandTableViewSamplesTests.h; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				061FD71D1AD40B0E0015E9CD /* CoreGraphics.framework in Frameworks */,
 				B7E3104A17A0D9350049FD09 /* UIKit.framework in Frameworks */,
 				B7E3104B17A0D9350049FD09 /* Foundation.framework in Frameworks */,
 			);
