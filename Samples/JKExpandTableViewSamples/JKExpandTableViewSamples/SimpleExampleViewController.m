@@ -7,6 +7,8 @@
 //
 
 #import "SimpleExampleViewController.h"
+#import "CustomMultiSelectCell.h"
+#import "CustomParentCell.h"
 
 @interface SimpleExampleViewController ()
 
@@ -114,6 +116,16 @@
     return [self.dataModelArray count];
 }
 
+// OPTIONAL, you don't have to specify this.
+- (CGFloat)heightForParentCell {
+    return 44.0f;
+}
+
+// OPTIONAL, you don't have to specify this.
+- (CGFloat)heightForChildCell {
+    return 64.0f;
+}
+
 - (NSInteger) numberOfChildCellsUnderParentIndex:(NSInteger) parentIndex {
     NSMutableArray *childArray = [self.dataModelArray objectAtIndex:parentIndex];
     return [childArray count];
@@ -134,6 +146,29 @@
 
 - (UIImage *) iconForParentCellAtIndex:(NSInteger) parentIndex {
     return [UIImage imageNamed:@"arrow-icon"];
+}
+
+// OPTIONAL, you don't have to specify this.
+- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView multiSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CustomMultiSelectCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([CustomMultiSelectCell class])];
+    if (!cell) {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CustomMultiSelectCell class]) owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    return cell;
+}
+
+// OPTIONAL, you don't have to specify this.
+- (JKParentTableViewCell *)tableView:(UITableView *)tableView parentCellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CustomParentCell *cell = nil;
+    if (indexPath.row == self.dataModelArray.count - 1) {
+        cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([CustomParentCell class])];
+        if (!cell) {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CustomParentCell class]) owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+    }
+    return cell;
 }
 
 - (UIImage *) iconForCellAtChildIndex:(NSInteger) childIndex withinParentCellIndex:(NSInteger) parentIndex {

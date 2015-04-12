@@ -7,14 +7,12 @@
 //
 
 #import "JKExpandTableView.h"
-#import "JKParentTableViewCell.h"
-#import "JKMultiSelectSubTableViewCell.h"
-#import "JKSingleSelectSubTableViewCell.h"
 
 @implementation JKExpandTableView
 @synthesize tableViewDelegate, expansionStates;
 
-#define HEIGHT_FOR_CELL 44.0
+#define HEIGHT_FOR_PARENT_CELL 44.0
+#define HEIGHT_FOR_CHILD_CELL 44.0
 
 - (id)initWithFrame:(CGRect)frame dataSource:dataDelegate tableViewDelegate:tableDelegate {
     self = [super initWithFrame:frame style:UITableViewStylePlain];
@@ -189,6 +187,7 @@
         BOOL isMultiSelect = [self.tableViewDelegate shouldSupportMultipleSelectableChildrenAtParentIndex:parentIndex];
         if (isMultiSelect) {
             JKMultiSelectSubTableViewCell *cell = (JKMultiSelectSubTableViewCell *)[self dequeueReusableCellWithIdentifier:CellIdentifier_MultiSelect];
+
             if (cell == nil) {
                 cell = [[JKMultiSelectSubTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier_MultiSelect];
             } else {
@@ -210,6 +209,7 @@
             }
             
             NSLog(@"cellForRowAtIndexPath MultiSelect parentIndex: %ld", (long)parentIndex);
+            [cell setChildCellHeight:[self heightForChildCell]];
             [cell setParentIndex:parentIndex];
             [cell setDelegate:self];
             [cell reload];
@@ -242,14 +242,21 @@
             }
             
             NSLog(@"cellForRowAtIndexPath SingleSelect parentIndex: %ld", (long)parentIndex);
+            [cell setChildCellHeight:[self heightForChildCell]];
             [cell setParentIndex:parentIndex];
             [cell setDelegate:self];
             [cell reload];
             return cell;
         }
     } else {
+        JKParentTableViewCell *cell = nil;
+        if ([self.tableViewDelegate respondsToSelector:@selector(tableView:parentCellForRowAtIndexPath:)]) {
+            cell = [self.tableViewDelegate tableView:tableView parentCellForRowAtIndexPath:indexPath];
+        }
         // regular parent cell
-        JKParentTableViewCell *cell = (JKParentTableViewCell *)[self dequeueReusableCellWithIdentifier:CellIdentifier_Parent];
+        if (cell == nil) {
+            cell = (JKParentTableViewCell *)[self dequeueReusableCellWithIdentifier:CellIdentifier_Parent];
+        }
         if (cell == nil) {
             cell = [[JKParentTableViewCell alloc] initWithReuseIdentifier:CellIdentifier_Parent];
         } else {
@@ -285,7 +292,6 @@
         
         [cell setParentIndex:parentIndex];
         [cell selectionIndicatorState:[self hasSelectedChild:parentIndex]];
-        //[cell setupDisplay];
         
         return cell;
     }
@@ -300,9 +306,9 @@
     if (isExpansionCell) {
         NSInteger parentIndex = [self parentIndexForRow:row];
         NSInteger numberOfChildren = [self.dataSourceDelegate numberOfChildCellsUnderParentIndex:parentIndex];
-        return HEIGHT_FOR_CELL * numberOfChildren;
+        return [self heightForChildCell] * numberOfChildren;
     } else {
-        return HEIGHT_FOR_CELL;
+        return [self heightForParentCell];
     }
 }
 
@@ -332,6 +338,39 @@
 }
 
 #pragma mark - JKMultiSelectSubTableViewCellDelegate
+
+- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView multiSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    JKSubTableViewCellCell *cell;
+    if ([self.tableViewDelegate respondsToSelector:@selector(tableView:multiSelectCellForRowAtIndexPath:)]) {
+        cell = [self.tableViewDelegate tableView:tableView multiSelectCellForRowAtIndexPath:indexPath];
+    }
+    return cell;
+}
+
+- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView singleSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    JKSubTableViewCellCell *cell;
+    if ([self.tableViewDelegate respondsToSelector:@selector(tableView:singleSelectCellForRowAtIndexPath:)]) {
+        cell = [self.tableViewDelegate tableView:tableView singleSelectCellForRowAtIndexPath:indexPath];
+    }
+    return cell;
+}
+
+- (CGFloat)heightForParentCell {
+    CGFloat heightForParentCell = HEIGHT_FOR_PARENT_CELL;
+    if ([self.dataSourceDelegate respondsToSelector:@selector(heightForParentCell)]) {
+        heightForParentCell = [self.dataSourceDelegate heightForParentCell];
+    }
+    return heightForParentCell;
+}
+
+- (CGFloat)heightForChildCell {
+    CGFloat heightForChildCell = HEIGHT_FOR_CHILD_CELL;
+    if ([self.dataSourceDelegate respondsToSelector:@selector(heightForChildCell)]) {
+        heightForChildCell = [self.dataSourceDelegate heightForChildCell];
+    }
+    return heightForChildCell;
+}
+
 - (NSInteger) numberOfChildrenUnderParentIndex:(NSInteger)parentIndex {
     return [self.dataSourceDelegate numberOfChildCellsUnderParentIndex:parentIndex];
 }

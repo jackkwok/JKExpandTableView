@@ -80,17 +80,21 @@
                                                  checkMarkHeight);
 }
 
+- (UIImageView *)icon {
+    return [self pIndicator] != nil ? [self pIndicator] : iconImage;
+}
+
 - (void)rotateIconToExpanded {
     [UIView beginAnimations:@"rotateDisclosure" context:nil];
     [UIView setAnimationDuration:0.2];
-    iconImage.transform = CGAffineTransformMakeRotation(M_PI * 2.5);
+    [self icon].transform = CGAffineTransformMakeRotation(M_PI * 2.5);
     [UIView commitAnimations];
 }
 
 - (void)rotateIconToCollapsed {
     [UIView beginAnimations:@"rotateDisclosure" context:nil];
     [UIView setAnimationDuration:0.2];
-    iconImage.transform = CGAffineTransformMakeRotation(M_PI * 2);
+    [self icon].transform = CGAffineTransformMakeRotation(M_PI * 2);
     [UIView commitAnimations];
 }
 
@@ -105,6 +109,11 @@
     } else {
         self.selectionIndicatorImgView.hidden = YES;
     }
+}
+
+// subclasses can implement
+- (UIImageView *)pIndicator {
+    return nil;
 }
 
 - (void)setCellForegroundColor:(UIColor *) foregroundColor {

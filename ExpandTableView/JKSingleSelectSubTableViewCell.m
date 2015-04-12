@@ -44,4 +44,14 @@
     [self.delegate didSelectRowAtChildIndex:indexPath.row selected:isSwitchedOn underParentIndex:self.parentIndex];
 }
 
+- (JKSubTableViewCellCell *)customChildCell:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath{
+    JKSubTableViewCellCell *cell;
+    if ([self.delegate tableView:tableView singleSelectCellForRowAtIndexPath:indexPath] != nil) {
+        cell = [self.delegate tableView:tableView singleSelectCellForRowAtIndexPath:indexPath];
+    } else {
+        cell = [super customChildCell:tableView indexPath:indexPath];
+    }
+    return cell;
+}
+
 @end
