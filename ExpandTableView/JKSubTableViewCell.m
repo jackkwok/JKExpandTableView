@@ -92,7 +92,7 @@
 }
 
 // subclasses should implement.
-- (JKSubTableViewCellCell *)customChildCell:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
+- (JKSubTableViewCellCell *)customChildCell:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger)parentIndex {
     return nil;
 }
 
@@ -111,8 +111,8 @@
     
     JKSubTableViewCellCell *cell;
     BOOL isCustomCell = NO;
-    if ([self customChildCell:tableView indexPath:indexPath] != nil) {
-        cell = [self customChildCell:tableView indexPath:indexPath];
+    if ([self customChildCell:tableView indexPath:indexPath withInParentCellIndex:self.parentIndex] != nil) {
+        cell = [self customChildCell:tableView indexPath:indexPath withInParentCellIndex:self.parentIndex];
         isCustomCell = YES;
     } else if (cell == nil) {
         cell = (JKSubTableViewCellCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];

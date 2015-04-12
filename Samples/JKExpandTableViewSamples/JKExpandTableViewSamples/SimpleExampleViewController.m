@@ -149,7 +149,7 @@
 }
 
 // OPTIONAL, you don't have to specify this.
-- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView multiSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView multiSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger) parentIndex {
     CustomMultiSelectCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([CustomMultiSelectCell class])];
     if (!cell) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CustomMultiSelectCell class]) owner:self options:nil];

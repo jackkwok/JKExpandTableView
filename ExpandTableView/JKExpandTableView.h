@@ -51,11 +51,11 @@
 /*! Optional method to override and provide your custom cell for multi selection mode.
 
  */
-- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView multiSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView multiSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger) parentIndex;
 /*! Optional method to override and provide your custom cell for single selection mode.
-
+ 
  */
-- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView singleSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView singleSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger) parentIndex;
 /*! Optional method to override and provide your custom cell for parent cells.
 
  */

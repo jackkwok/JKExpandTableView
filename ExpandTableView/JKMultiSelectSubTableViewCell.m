@@ -29,15 +29,14 @@
     [self.delegate didSelectRowAtChildIndex:indexPath.row selected:isSwitchedOn underParentIndex:self.parentIndex];
 }
 
-- (JKSubTableViewCellCell *)customChildCell:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath{
+- (JKSubTableViewCellCell *)customChildCell:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger) parentIndex {
     JKSubTableViewCellCell *cell;
-    if ([self.delegate tableView:tableView multiSelectCellForRowAtIndexPath:indexPath] != nil) {
-        cell = [self.delegate tableView:tableView multiSelectCellForRowAtIndexPath:indexPath];
+    if ([self.delegate tableView:tableView multiSelectCellForRowAtIndexPath:indexPath withInParentCellIndex:parentIndex] != nil) {
+        cell = [self.delegate tableView:tableView multiSelectCellForRowAtIndexPath:indexPath withInParentCellIndex:parentIndex];
     } else {
-        cell = [super customChildCell:tableView indexPath:indexPath];
+        cell = [super customChildCell:tableView indexPath:indexPath withInParentCellIndex:parentIndex];
     }
     return cell;
 }
-
 
 @end

@@ -369,18 +369,18 @@
 
 #pragma mark - JKMultiSelectSubTableViewCellDelegate
 
-- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView multiSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView multiSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger) parentIndex {
     JKSubTableViewCellCell *cell;
-    if ([self.tableViewDelegate respondsToSelector:@selector(tableView:multiSelectCellForRowAtIndexPath:)]) {
-        cell = [self.tableViewDelegate tableView:tableView multiSelectCellForRowAtIndexPath:indexPath];
+    if ([self.tableViewDelegate respondsToSelector:@selector(tableView:multiSelectCellForRowAtIndexPath:withInParentCellIndex:)]) {
+        cell = [self.tableViewDelegate tableView:tableView multiSelectCellForRowAtIndexPath:indexPath withInParentCellIndex:parentIndex];
     }
     return cell;
 }
 
-- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView singleSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView singleSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger) parentIndex {
     JKSubTableViewCellCell *cell;
-    if ([self.tableViewDelegate respondsToSelector:@selector(tableView:singleSelectCellForRowAtIndexPath:)]) {
-        cell = [self.tableViewDelegate tableView:tableView singleSelectCellForRowAtIndexPath:indexPath];
+    if ([self.tableViewDelegate respondsToSelector:@selector(tableView:singleSelectCellForRowAtIndexPath:withInParentCellIndex:)]) {
+        cell = [self.tableViewDelegate tableView:tableView singleSelectCellForRowAtIndexPath:indexPath withInParentCellIndex:parentIndex];
     }
     return cell;
 }

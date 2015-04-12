@@ -31,11 +31,11 @@
 /*! Optional method to override and provide your custom cell for multi selection mode.
  
  */
-- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView multiSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView multiSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger) parentIndex;
 /*! Optional method to override and provide your custom cell for single selection mode.
  
  */
-- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView singleSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView singleSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger) parentIndex;
 
 @end
 
@@ -60,7 +60,7 @@
 @property(nonatomic,strong,getter = getSubTableFont, setter = setSubTableFont:) UIFont *font;
 
 - (void)customInit;
-- (JKSubTableViewCellCell *)customChildCell:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
+- (JKSubTableViewCellCell *)customChildCell:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger)parentIndex;
 - (UIImage *) selectionIndicatorImgOrDefault;
 - (void) reload;
 
