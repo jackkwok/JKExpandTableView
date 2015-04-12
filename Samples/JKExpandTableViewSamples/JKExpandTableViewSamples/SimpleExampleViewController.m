@@ -171,6 +171,11 @@
     return cell;
 }
 
+// optional, default is NO
+- (BOOL)singleChoiceBehavior {
+    return YES;
+}
+
 - (UIImage *) iconForCellAtChildIndex:(NSInteger) childIndex withinParentCellIndex:(NSInteger) parentIndex {
     if (((childIndex + parentIndex) % 3) == 0) {
         return [UIImage imageNamed:@"heart"];

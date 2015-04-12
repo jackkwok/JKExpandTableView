@@ -27,6 +27,9 @@
 - (BOOL) shouldSupportMultipleSelectableChildrenAtParentIndex:(NSInteger) parentIndex;
 
 @optional
+
+- (BOOL)singleChoiceBehavior;
+
 /*! Optional method the delegate should implement to get notified when a child is clicked on.
 
  @param childIndex The child index in question

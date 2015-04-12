@@ -8,6 +8,12 @@
 
 #import "JKExpandTableView.h"
 
+@interface JKExpandTableView ()
+
+@property (nonatomic, assign) NSInteger lastExpandedPosition;
+
+@end
+
 @implementation JKExpandTableView
 @synthesize tableViewDelegate, expansionStates;
 
@@ -50,6 +56,7 @@
 */
 
 - (void) initialize {
+    self.lastExpandedPosition = -1;
     [self setDataSource:self];
     [self setDelegate:self];
     self.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
@@ -82,10 +89,33 @@
     if ([[self.expansionStates objectAtIndex:parentIndex] boolValue]) {
         return;
     }
+
     // update expansionStates so backing data is ready before calling insertRowsAtIndexPaths
     [self.expansionStates replaceObjectAtIndex:parentIndex withObject:@"YES"];
 
     [self insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:(row + 1) inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+
+    [self collapsePreviousRow:row];
+}
+
+- (void)collapsePreviousRow:(NSInteger)currentExpandedRow {
+    // used to solve bug when the last expanded position is after current position
+    BOOL offset = self.lastExpandedPosition > [self parentIndexForRow:currentExpandedRow];
+    if ([self.tableViewDelegate respondsToSelector:@selector(singleChoiceBehavior)]
+        && [self.tableViewDelegate singleChoiceBehavior]
+        && self.lastExpandedPosition != -1
+        && currentExpandedRow != self.lastExpandedPosition) {
+        NSInteger pos = offset? self.lastExpandedPosition + 1 : self.lastExpandedPosition;
+        [self collapseForParentAtRow:pos];
+
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:pos inSection:0];
+        UITableViewCell *selectedCell = [self cellForRowAtIndexPath:indexPath];
+        if ([selectedCell isKindOfClass:[JKParentTableViewCell class]]) {
+            JKParentTableViewCell * pCell = (JKParentTableViewCell *)selectedCell;
+            [self animateParentCellIconExpand:NO forCell:pCell];
+        }
+    }
+    self.lastExpandedPosition = [self parentIndexForRow:currentExpandedRow];
 }
 
 - (void) collapseForParentAtRow: (NSInteger) row {

@@ -16,7 +16,7 @@
 @implementation CustomParentCell
 
 - (UIImageView *)pIndicator {
-    return  self.indicator;
+    return self.indicator;
 }
 
 @end
