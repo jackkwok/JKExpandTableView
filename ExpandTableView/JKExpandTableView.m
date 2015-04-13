@@ -281,7 +281,8 @@
     } else {
         JKParentTableViewCell *cell = nil;
         if ([self.tableViewDelegate respondsToSelector:@selector(tableView:parentCellForRowAtIndexPath:)]) {
-            cell = [self.tableViewDelegate tableView:tableView parentCellForRowAtIndexPath:indexPath];
+            NSInteger parentRow = [self parentIndexForRow:indexPath.row];
+            cell = [self.tableViewDelegate tableView:tableView parentCellForRowAtIndexPath:[NSIndexPath indexPathForRow:parentRow inSection:0]];
         }
         // regular parent cell
         if (cell == nil) {

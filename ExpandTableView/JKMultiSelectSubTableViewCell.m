@@ -27,6 +27,8 @@
     }
     
     [self.delegate didSelectRowAtChildIndex:indexPath.row selected:isSwitchedOn underParentIndex:self.parentIndex];
+
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (JKSubTableViewCellCell *)customChildCell:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger) parentIndex {
