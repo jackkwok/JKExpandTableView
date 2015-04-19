@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "JKMultiSelectSubTableViewCell.h"
+#import "JKSingleSelectSubTableViewCell.h"
+#import "JKParentTableViewCell.h"
+#import "JKSubTableViewCellCell.h"
 
 /*!
  @protocol JKExpandTableViewDelegate
@@ -24,6 +27,9 @@
 - (BOOL) shouldSupportMultipleSelectableChildrenAtParentIndex:(NSInteger) parentIndex;
 
 @optional
+
+- (BOOL)singleChoiceBehavior;
+
 /*! Optional method the delegate should implement to get notified when a child is clicked on.
 
  @param childIndex The child index in question
@@ -41,6 +47,19 @@
   @param parentIndex The parent index in question
  */
 - (void) tableView:(UITableView *)tableView didSelectParentCellAtIndex:(NSInteger) parentIndex;
+
+/*! Optional method to override and provide your custom cell for multi selection mode.
+
+ */
+- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView multiSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger) parentIndex;
+/*! Optional method to override and provide your custom cell for single selection mode.
+ 
+ */
+- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView singleSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger) parentIndex;
+/*! Optional method to override and provide your custom cell for parent cells.
+
+ */
+- (JKParentTableViewCell *)tableView:(UITableView *)tableView parentCellForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 /*! Optional method to set custom foreground color.
  
@@ -106,6 +125,12 @@
 - (BOOL) shouldDisplaySelectedStateForCellAtChildIndex:(NSInteger) childIndex withinParentCellIndex:(NSInteger) parentIndex;
 
 @optional
+/*! Optional method
+ */
+- (CGFloat)heightForParentCell;
+/*! Optional method
+ */
+- (CGFloat)heightForChildCell;
 
 /*! Optional method
  

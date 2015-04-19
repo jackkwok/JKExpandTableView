@@ -7,14 +7,18 @@
 //
 
 #import "JKExpandTableView.h"
-#import "JKParentTableViewCell.h"
-#import "JKMultiSelectSubTableViewCell.h"
-#import "JKSingleSelectSubTableViewCell.h"
+
+@interface JKExpandTableView ()
+
+@property (nonatomic, assign) NSInteger lastExpandedPosition;
+
+@end
 
 @implementation JKExpandTableView
 @synthesize tableViewDelegate, expansionStates;
 
-#define HEIGHT_FOR_CELL 44.0
+#define HEIGHT_FOR_PARENT_CELL 44.0
+#define HEIGHT_FOR_CHILD_CELL 44.0
 
 - (id)initWithFrame:(CGRect)frame dataSource:dataDelegate tableViewDelegate:tableDelegate {
     self = [super initWithFrame:frame style:UITableViewStylePlain];
@@ -52,6 +56,7 @@
 */
 
 - (void) initialize {
+    self.lastExpandedPosition = -1;
     [self setDataSource:self];
     [self setDelegate:self];
     self.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
@@ -69,6 +74,11 @@
     [self initExpansionStates];
 }
 
+- (void)reloadData {
+    [self initExpansionStates];
+    [super reloadData];
+}
+
 - (void) initExpansionStates
 {
     // all collapsed initially
@@ -84,10 +94,33 @@
     if ([[self.expansionStates objectAtIndex:parentIndex] boolValue]) {
         return;
     }
+
     // update expansionStates so backing data is ready before calling insertRowsAtIndexPaths
     [self.expansionStates replaceObjectAtIndex:parentIndex withObject:@"YES"];
 
     [self insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:(row + 1) inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+
+    [self collapsePreviousRow:row];
+}
+
+- (void)collapsePreviousRow:(NSInteger)currentExpandedRow {
+    // used to solve bug when the last expanded position is after current position
+    BOOL offset = self.lastExpandedPosition > [self parentIndexForRow:currentExpandedRow];
+    if ([self.tableViewDelegate respondsToSelector:@selector(singleChoiceBehavior)]
+        && [self.tableViewDelegate singleChoiceBehavior]
+        && self.lastExpandedPosition != -1
+        && currentExpandedRow != self.lastExpandedPosition) {
+        NSInteger pos = offset? self.lastExpandedPosition + 1 : self.lastExpandedPosition;
+        [self collapseForParentAtRow:pos];
+
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:pos inSection:0];
+        UITableViewCell *selectedCell = [self cellForRowAtIndexPath:indexPath];
+        if ([selectedCell isKindOfClass:[JKParentTableViewCell class]]) {
+            JKParentTableViewCell * pCell = (JKParentTableViewCell *)selectedCell;
+            [self animateParentCellIconExpand:NO forCell:pCell];
+        }
+    }
+    self.lastExpandedPosition = [self parentIndexForRow:currentExpandedRow];
 }
 
 - (void) collapseForParentAtRow: (NSInteger) row {
@@ -189,6 +222,7 @@
         BOOL isMultiSelect = [self.tableViewDelegate shouldSupportMultipleSelectableChildrenAtParentIndex:parentIndex];
         if (isMultiSelect) {
             JKMultiSelectSubTableViewCell *cell = (JKMultiSelectSubTableViewCell *)[self dequeueReusableCellWithIdentifier:CellIdentifier_MultiSelect];
+
             if (cell == nil) {
                 cell = [[JKMultiSelectSubTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier_MultiSelect];
             } else {
@@ -210,6 +244,7 @@
             }
             
             NSLog(@"cellForRowAtIndexPath MultiSelect parentIndex: %ld", (long)parentIndex);
+            [cell setChildCellHeight:[self heightForChildCell]];
             [cell setParentIndex:parentIndex];
             [cell setDelegate:self];
             [cell reload];
@@ -242,14 +277,22 @@
             }
             
             NSLog(@"cellForRowAtIndexPath SingleSelect parentIndex: %ld", (long)parentIndex);
+            [cell setChildCellHeight:[self heightForChildCell]];
             [cell setParentIndex:parentIndex];
             [cell setDelegate:self];
             [cell reload];
             return cell;
         }
     } else {
+        JKParentTableViewCell *cell = nil;
+        if ([self.tableViewDelegate respondsToSelector:@selector(tableView:parentCellForRowAtIndexPath:)]) {
+            NSInteger parentRow = [self parentIndexForRow:indexPath.row];
+            cell = [self.tableViewDelegate tableView:tableView parentCellForRowAtIndexPath:[NSIndexPath indexPathForRow:parentRow inSection:0]];
+        }
         // regular parent cell
-        JKParentTableViewCell *cell = (JKParentTableViewCell *)[self dequeueReusableCellWithIdentifier:CellIdentifier_Parent];
+        if (cell == nil) {
+            cell = (JKParentTableViewCell *)[self dequeueReusableCellWithIdentifier:CellIdentifier_Parent];
+        }
         if (cell == nil) {
             cell = [[JKParentTableViewCell alloc] initWithReuseIdentifier:CellIdentifier_Parent];
         } else {
@@ -285,7 +328,6 @@
         
         [cell setParentIndex:parentIndex];
         [cell selectionIndicatorState:[self hasSelectedChild:parentIndex]];
-        //[cell setupDisplay];
         
         return cell;
     }
@@ -300,9 +342,9 @@
     if (isExpansionCell) {
         NSInteger parentIndex = [self parentIndexForRow:row];
         NSInteger numberOfChildren = [self.dataSourceDelegate numberOfChildCellsUnderParentIndex:parentIndex];
-        return HEIGHT_FOR_CELL * numberOfChildren;
+        return [self heightForChildCell] * numberOfChildren;
     } else {
-        return HEIGHT_FOR_CELL;
+        return [self heightForParentCell];
     }
 }
 
@@ -332,6 +374,39 @@
 }
 
 #pragma mark - JKMultiSelectSubTableViewCellDelegate
+
+- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView multiSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger) parentIndex {
+    JKSubTableViewCellCell *cell;
+    if ([self.tableViewDelegate respondsToSelector:@selector(tableView:multiSelectCellForRowAtIndexPath:withInParentCellIndex:)]) {
+        cell = [self.tableViewDelegate tableView:tableView multiSelectCellForRowAtIndexPath:indexPath withInParentCellIndex:parentIndex];
+    }
+    return cell;
+}
+
+- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView singleSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger) parentIndex {
+    JKSubTableViewCellCell *cell;
+    if ([self.tableViewDelegate respondsToSelector:@selector(tableView:singleSelectCellForRowAtIndexPath:withInParentCellIndex:)]) {
+        cell = [self.tableViewDelegate tableView:tableView singleSelectCellForRowAtIndexPath:indexPath withInParentCellIndex:parentIndex];
+    }
+    return cell;
+}
+
+- (CGFloat)heightForParentCell {
+    CGFloat heightForParentCell = HEIGHT_FOR_PARENT_CELL;
+    if ([self.dataSourceDelegate respondsToSelector:@selector(heightForParentCell)]) {
+        heightForParentCell = [self.dataSourceDelegate heightForParentCell];
+    }
+    return heightForParentCell;
+}
+
+- (CGFloat)heightForChildCell {
+    CGFloat heightForChildCell = HEIGHT_FOR_CHILD_CELL;
+    if ([self.dataSourceDelegate respondsToSelector:@selector(heightForChildCell)]) {
+        heightForChildCell = [self.dataSourceDelegate heightForChildCell];
+    }
+    return heightForChildCell;
+}
+
 - (NSInteger) numberOfChildrenUnderParentIndex:(NSInteger)parentIndex {
     return [self.dataSourceDelegate numberOfChildCellsUnderParentIndex:parentIndex];
 }

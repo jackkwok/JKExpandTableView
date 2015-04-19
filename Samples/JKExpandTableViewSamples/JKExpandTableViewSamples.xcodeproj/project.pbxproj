@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061691A81AD99B7000B36315 /* CustomMultiSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 061691A61AD99B7000B36315 /* CustomMultiSelectCell.m */; };
+		061691AB1AD99F8400B36315 /* CustomMultiSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 061691AA1AD99F8400B36315 /* CustomMultiSelectCell.xib */; };
+		061691AE1ADABE6200B36315 /* CustomParentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 061691AD1ADABE6200B36315 /* CustomParentCell.m */; };
+		061691B01ADABE7500B36315 /* CustomParentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 061691AF1ADABE7500B36315 /* CustomParentCell.xib */; };
+		061FD71D1AD40B0E0015E9CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E3102E17A0D9340049FD09 /* CoreGraphics.framework */; };
 		B7C7C7D417A21C160046DDCE /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C7C7D317A21C160046DDCE /* cat.png */; };
 		B7C7C7D617A21C1F0046DDCE /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C7C7D517A21C1F0046DDCE /* heart.png */; };
 		B7D377F317A327400001F5BC /* SimpleExampleViewControllerPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7D377F217A327400001F5BC /* SimpleExampleViewControllerPad.xib */; };
@@ -64,6 +69,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		061691A51AD99B7000B36315 /* CustomMultiSelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMultiSelectCell.h; sourceTree = "<group>"; };
+		061691A61AD99B7000B36315 /* CustomMultiSelectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMultiSelectCell.m; sourceTree = "<group>"; };
+		061691AA1AD99F8400B36315 /* CustomMultiSelectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomMultiSelectCell.xib; sourceTree = "<group>"; };
+		061691AC1ADABE6200B36315 /* CustomParentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomParentCell.h; sourceTree = "<group>"; };
+		061691AD1ADABE6200B36315 /* CustomParentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomParentCell.m; sourceTree = "<group>"; };
+		061691AF1ADABE7500B36315 /* CustomParentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomParentCell.xib; sourceTree = "<group>"; };
 		B7C7C7D317A21C160046DDCE /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
 		B7C7C7D517A21C1F0046DDCE /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		B7D377F217A327400001F5BC /* SimpleExampleViewControllerPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleExampleViewControllerPad.xib; sourceTree = "<group>"; };
@@ -82,7 +93,7 @@
 		B7E3103C17A0D9340049FD09 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B7E3103E17A0D9340049FD09 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B7E3104017A0D9340049FD09 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		B7E3104717A0D9340049FD09 /* JKExpandTableViewSamplesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKExpandTableViewSamplesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7E3104717A0D9340049FD09 /* JKExpandTableViewSamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKExpandTableViewSamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E3105017A0D9350049FD09 /* JKExpandTableViewSamplesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JKExpandTableViewSamplesTests-Info.plist"; sourceTree = "<group>"; };
 		B7E3105217A0D9350049FD09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B7E3105417A0D9350049FD09 /* JKExpandTableViewSamplesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKExpandTableViewSamplesTests.h; sourceTree = "<group>"; };
@@ -125,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				061FD71D1AD40B0E0015E9CD /* CoreGraphics.framework in Frameworks */,
 				B7E3104A17A0D9350049FD09 /* UIKit.framework in Frameworks */,
 				B7E3104B17A0D9350049FD09 /* Foundation.framework in Frameworks */,
 			);
@@ -148,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				B7E3102717A0D9340049FD09 /* JKExpandTableViewSamples.app */,
-				B7E3104717A0D9340049FD09 /* JKExpandTableViewSamplesTests.octest */,
+				B7E3104717A0D9340049FD09 /* JKExpandTableViewSamplesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,6 +186,12 @@
 				B7D377F217A327400001F5BC /* SimpleExampleViewControllerPad.xib */,
 				B7E3108117A0D9E80049FD09 /* examples_img */,
 				B7E3103117A0D9340049FD09 /* Supporting Files */,
+				061691A51AD99B7000B36315 /* CustomMultiSelectCell.h */,
+				061691A61AD99B7000B36315 /* CustomMultiSelectCell.m */,
+				061691AA1AD99F8400B36315 /* CustomMultiSelectCell.xib */,
+				061691AC1ADABE6200B36315 /* CustomParentCell.h */,
+				061691AD1ADABE6200B36315 /* CustomParentCell.m */,
+				061691AF1ADABE7500B36315 /* CustomParentCell.xib */,
 			);
 			path = JKExpandTableViewSamples;
 			sourceTree = "<group>";
@@ -300,7 +318,7 @@
 			);
 			name = JKExpandTableViewSamplesTests;
 			productName = JKExpandTableViewSamplesTests;
-			productReference = B7E3104717A0D9340049FD09 /* JKExpandTableViewSamplesTests.octest */;
+			productReference = B7E3104717A0D9340049FD09 /* JKExpandTableViewSamplesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -347,9 +365,11 @@
 				B7E3103F17A0D9340049FD09 /* Default@2x.png in Resources */,
 				B7E3104117A0D9340049FD09 /* Default-568h@2x.png in Resources */,
 				B7E3108317A0D9E80049FD09 /* green_checkmark.png in Resources */,
+				061691B01ADABE7500B36315 /* CustomParentCell.xib in Resources */,
 				B7D7223517A1DC8C005680A5 /* green_checkmark@2x.png in Resources */,
 				B7D7223617A1DC8C005680A5 /* smartphone.png in Resources */,
 				B7C7C7D417A21C160046DDCE /* cat.png in Resources */,
+				061691AB1AD99F8400B36315 /* CustomMultiSelectCell.xib in Resources */,
 				B7C7C7D617A21C1F0046DDCE /* heart.png in Resources */,
 				B7D377F317A327400001F5BC /* SimpleExampleViewControllerPad.xib in Resources */,
 				B7FB1C9017A779C500078022 /* dog.png in Resources */,
@@ -392,12 +412,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				061691AE1ADABE6200B36315 /* CustomParentCell.m in Sources */,
 				B7E3108917A0DB7F0049FD09 /* JKExpandTableView.m in Sources */,
 				B7E3108B17A0DB7F0049FD09 /* JKMultiSelectSubTableViewCell.m in Sources */,
 				B7E3108D17A0DB7F0049FD09 /* JKParentTableViewCell.m in Sources */,
 				B7E3108F17A0DB7F0049FD09 /* JKSingleSelectSubTableViewCell.m in Sources */,
 				B7E3109117A0DB7F0049FD09 /* JKSubTableViewCell.m in Sources */,
 				B7E3109317A0DB7F0049FD09 /* JKSubTableViewCellCell.m in Sources */,
+				061691A81AD99B7000B36315 /* CustomMultiSelectCell.m in Sources */,
 				B7E3108617A0DA4B0049FD09 /* SimpleExampleViewController.m in Sources */,
 				B7E3103717A0D9340049FD09 /* main.m in Sources */,
 				B7E3103B17A0D9340049FD09 /* JKAppDelegate.m in Sources */,

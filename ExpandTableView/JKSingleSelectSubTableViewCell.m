@@ -42,6 +42,18 @@
     }
     
     [self.delegate didSelectRowAtChildIndex:indexPath.row selected:isSwitchedOn underParentIndex:self.parentIndex];
+
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (JKSubTableViewCellCell *)customChildCell:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger) parentIndex {
+    JKSubTableViewCellCell *cell;
+    if ([self.delegate tableView:tableView singleSelectCellForRowAtIndexPath:indexPath withInParentCellIndex:parentIndex] != nil) {
+        cell = [self.delegate tableView:tableView singleSelectCellForRowAtIndexPath:indexPath withInParentCellIndex:parentIndex];
+    } else {
+        cell = [super customChildCell:tableView indexPath:indexPath withInParentCellIndex:parentIndex];
+    }
+    return cell;
 }
 
 @end

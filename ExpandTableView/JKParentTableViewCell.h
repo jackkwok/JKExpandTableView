@@ -29,4 +29,5 @@
 - (void)setCellForegroundColor:(UIColor *) foregroundColor;
 - (void)setCellBackgroundColor:(UIColor *) backgroundColor;
 
+- (UIImageView *)pIndicator;
 @end

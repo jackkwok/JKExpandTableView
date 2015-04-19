@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class JKSubTableViewCellCell;
+
 @protocol JKSubTableViewCellDelegate <NSObject>
 // return total number of children under this parentIndex
 - (NSInteger) numberOfChildrenUnderParentIndex:(NSInteger)parentIndex;
@@ -24,9 +26,20 @@
 - (NSString *) labelForChildIndex:(NSInteger)childIndex underParentIndex:(NSInteger)parentIndex;
 // get the icon image
 - (UIImage *) iconForChildIndex:(NSInteger)childIndex underParentIndex:(NSInteger)parentIndex;
+
+@optional
+/*! Optional method to override and provide your custom cell for multi selection mode.
+ 
+ */
+- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView multiSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger) parentIndex;
+/*! Optional method to override and provide your custom cell for single selection mode.
+ 
+ */
+- (JKSubTableViewCellCell *)tableView:(UITableView *)tableView singleSelectCellForRowAtIndexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger) parentIndex;
+
 @end
 
-@interface JKSubTableViewCell : UITableViewCell <UITableViewDataSource,UITableViewDelegate> {
+@interface JKSubTableViewCell : UITableViewCell <UITableViewDataSource, UITableViewDelegate> {
     UITableView *insideTableView;
     __weak id delegate;
     UIColor *bgColor;
@@ -38,12 +51,16 @@
 @property(nonatomic,strong) UITableView *insideTableView;
 @property(nonatomic,weak,getter = getDelegate, setter = setDelegate:) id<JKSubTableViewCellDelegate> delegate;
 @property(nonatomic) NSInteger parentIndex;
+@property(nonatomic, assign) CGFloat childCellHeight;
 @property(nonatomic,strong) UIImage *selectionIndicatorImg;
+
 
 @property(nonatomic,strong,getter = getSubTableForegroundColor, setter = setSubTableForegroundColor:) UIColor *fgColor;
 @property(nonatomic,strong,getter = getSubTableBackgroundColor, setter = setSubTableBackgroundColor:) UIColor *bgColor;
 @property(nonatomic,strong,getter = getSubTableFont, setter = setSubTableFont:) UIFont *font;
 
+- (void)customInit;
+- (JKSubTableViewCellCell *)customChildCell:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath withInParentCellIndex:(NSInteger)parentIndex;
 - (UIImage *) selectionIndicatorImgOrDefault;
 - (void) reload;
 
