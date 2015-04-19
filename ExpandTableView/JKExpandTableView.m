@@ -74,6 +74,11 @@
     [self initExpansionStates];
 }
 
+- (void)reloadData {
+    [self initExpansionStates];
+    [super reloadData];
+}
+
 - (void) initExpansionStates
 {
     // all collapsed initially
